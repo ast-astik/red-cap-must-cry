@@ -1,0 +1,14 @@
+// Reset CSS
+@import "reset.scss";
+
+
+
+// Variables
+$Caveat: 'Caveat', cursive;
+$Montserrat: 'Montserrat', sans-serif;
+
+
+
+body {
+	font-family: $Montserrat;
+}
