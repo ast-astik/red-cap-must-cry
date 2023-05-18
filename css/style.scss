@@ -71,6 +71,30 @@ h1 {
 	font-weight: 700;
 }
 
+@media (max-width: 1200px) {
+	h1 {
+		font-size: 100px;
+	}
+}
+
+@media (max-width: 991.5px) {
+	h1 {
+		font-size: 80px;
+	}
+}
+
+@media (max-width: 767.5px) {
+	h1 {
+		font-size: 65px;
+	}
+}
+
+@media (max-width: 575.5px) {
+	h1 {
+		font-size: 44px;
+	}
+}
+
 
 
 .wrapper {
@@ -441,6 +465,12 @@ h1 {
 	padding: 99px 0 0 0;
 }
 
+@media (max-width: 575.5px) {
+	.main {
+		padding: 51px 0 0 0;
+	}
+}
+
 
 
 .initial {
@@ -476,14 +506,21 @@ h1 {
 		a {
 			width: 188px;
 			height: 58px;
+			@extend %flex-center;
 
+			background: #EE5646;
 			border-radius: 50px;
+		}
 
+		a:nth-child(1) {
 			img {
-				width: 100%;
-				height: 100%;
+				height: 40.56px;
+			}
+		}
 
-				border-radius: 50px;
+		a:nth-child(2) {
+			img {
+				height: 36.46px;
 			}
 		}
 
@@ -511,5 +548,118 @@ h1 {
 		right: 124px;
 
 		width: 40%;
+	}
+}
+
+@media (max-width: 1400px) {
+	.initial {
+		&__bg1 {
+			left: 0;
+		}
+		&__bg2 {
+			right: 0;
+			bottom: 40px;
+		}
+	}
+}
+
+@media (max-width: 1200px) {
+	.initial {
+		&__content {
+			padding: 100px 0 152px 0;
+		}
+	}
+}
+
+@media (max-width: 991.5px) {
+	.initial {
+		&__content {
+			padding: 60px 0 152px 0;
+
+			& > p {
+				margin: 25px 0 31px 0;
+
+				font-size: 28px;
+			}
+		}
+	}
+}
+
+@media (max-width: 767.5px) {
+	.initial {
+		&__bg1 {
+			bottom: 45px;
+		}
+		&__content {
+			padding: 35px 0 152px 0;
+
+			& > p {
+				margin: 10px 0 20px 0;
+
+				font-size: 24px;
+			}
+		}
+	}
+}
+
+@media (max-width: 575.5px) {
+	.initial {
+		&__container {
+			overflow-x: hidden;
+		}
+
+		&__bg1 {
+			bottom: auto;
+			top: 12px;
+			left: 50%;
+			//width: 68.8%;
+			width: 219px;
+
+			transform: translate(-43%, 0);
+		}
+		&__bg2 {
+			z-index: 3;
+			right: calc(50% - 190px);
+			bottom: 27px;
+
+			width: 150px;
+		}
+		&__content {
+			padding: 153px 0 63px 0;
+			width: 100%;
+
+			overflow-x: hidden;
+
+			& > p {
+				margin: 10px 0 20px 0;
+
+				font-size: 10px;
+			}
+		}
+		&__btns {
+			gap: 5px;
+			flex-direction: column;
+			align-items: center;
+			justify-content: flex-start;
+			width: 100%;
+
+			a,
+			.purple-btn {
+				width: 280px;
+				height: 45px;
+			}
+
+			a:nth-child(1) {
+				img {
+					height: 33px;
+				}
+			}
+
+			a:nth-child(2) {
+				img {
+					height: 30px;
+				}
+			}
+		}
 	}
 }
