@@ -623,6 +623,8 @@ h1 {
 			bottom: 27px;
 
 			width: 150px;
+
+			pointer-events: none;
 		}
 		&__content {
 			padding: 153px 0 63px 0;

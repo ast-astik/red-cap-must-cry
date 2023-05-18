@@ -592,6 +592,7 @@ h1 {
 		right: calc(50% - 190px);
 		bottom: 27px;
 		width: 150px;
+		pointer-events: none;
 	}
 	.initial__content {
 		padding: 153px 0 63px 0;
