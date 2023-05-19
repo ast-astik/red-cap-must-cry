@@ -56,6 +56,14 @@ $anim: all 0.3s ease;
 	opacity: 0.07;
 }
 
+%cross {
+	width: 24px;
+	height: 24px;
+
+	background: url("../img/cross.svg") no-repeat;
+	background-size: cover;
+}
+
 
 
 body {
@@ -64,11 +72,17 @@ body {
 	background: #FFFBFB;
 }
 
-h1 {
+h1, h4 {
 	font-family: $Caveat;
+	font-weight: 700;
+}
+h1 {
 	@include font(120px, 150%);
 	color: #2E1F3C;
-	font-weight: 700;
+}
+h4 {
+	@include font(36px, 150%);
+	color: #111827;
 }
 
 @media (max-width: 1200px) {
@@ -203,11 +217,7 @@ h1 {
 			top: 35px;
 			right: 22px;
 
-			width: 24px;
-			height: 24px;
-
-			background: url("../img/cross.svg") no-repeat;
-			background-size: cover;
+			@extend %cross;
 
 			display: none;
 		}	
@@ -665,3 +675,106 @@ h1 {
 		}
 	}
 }
+
+
+
+.orange-btn {
+	@extend %flex-center;
+	height: 58px;
+
+	@include font(18px, 22px);
+	font-weight: 600;
+	color: #fff;
+
+	background: #EE5646;
+	border-radius: 100px;
+}
+
+
+
+.popup-subscribe {
+	position: fixed;
+	z-index: 20;
+
+	@extend %flex-center;
+	width: 100%;
+	height: 100%;
+	padding: 40px 30px;
+
+	background: rgba(0 , 0 , 0, 0.1);
+
+	transition: $anim;
+
+	visibility: hidden;
+	opacity: 0;
+
+	&__container {
+		position: relative;
+
+		padding: 0 30px;
+		@extend %flex-center;
+		max-width: 990px;
+		width: 100%;
+		max-height: 620px;
+		height: 100%;
+
+		@include modal-bg-shdw-brdr(60px);
+
+		transition: $anim;
+
+		transform: scale(0);
+	}
+	&__close-btn {
+		position: absolute;
+		top: 35px;
+		right: 46px;
+
+		@extend %cross;
+	}
+	&__content {
+		max-width: 491px;
+		@extend %flex-center;
+		flex-direction: column;
+
+		h4 {
+			text-align: center;
+		}
+
+		.orange-btn {
+			width: 188px;
+		}
+	}
+	&__input {
+		margin: 40px 0;
+
+		@include flex(flex, row, 38px, center, center);
+		width: 100%;
+
+		span,
+		input {
+			font-family: $Caveat;
+			color: #2E1F3C;
+			font-weight: 700;
+		}
+
+		span {
+			@include font(25px, 32px);
+		}
+
+		input {
+			width: calc(100% - 57px - 38px);
+
+			@include font(25px, 40px);
+
+			border-bottom: 2px solid rgba(46, 31, 60, 0.5);
+		}
+	}
+}
+.popup-subscribe.open {
+	visibility: visible;
+	opacity: 1;
+
+	.popup-subscribe__container {
+		transform: scale(1);
+	}
+}	

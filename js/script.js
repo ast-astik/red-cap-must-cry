@@ -14,3 +14,13 @@ function burgerMenu(value) {
 
 	if (document.querySelector(".header__language-content_open")) toggleLanguageMenu();
 }
+
+function popup(popupClass, action) {
+	let popup = document.querySelector(popupClass);
+
+	if (action == "open") {
+		popup.classList.add("open");
+	} else {
+		popup.classList.remove("open");
+	}
+}

@@ -22,6 +22,20 @@
 			
 			<div class="background"></div>
 			
+			<div class="popup-subscribe">
+				<div class="popup-subscribe__container">
+					<button class="popup-subscribe__close-btn" onClick="popup('.popup-subscribe', 'close');"></button>
+					<div class="popup-subscribe__content">
+						<h4>Подписывайся на обновления, чтобы узнать о выходе первым!</h4>
+						<label class="popup-subscribe__input">
+							<span>E-mail</span>
+							<input type="email">
+						</label>
+						<button class="orange-btn">Submit</button>
+					</div>
+				</div>
+			</div>
+
 			<header class="header">
 				<div class="header__background"></div>
 				<div class="header__container">
@@ -106,7 +120,7 @@
 								<a href="#">
 									<img src="img/google-play.svg" alt="Google Play">
 								</a>
-								<button class="purple-btn">Подписаться</button>
+								<button class="purple-btn" onClick="popup('.popup-subscribe', 'open');">Подписаться</button>
 							</div>
 						</div>
 					</div>
