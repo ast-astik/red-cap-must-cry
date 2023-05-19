@@ -32,6 +32,12 @@ $anim: all 0.3s ease;
 	border-radius: $br;
 }
 
+@mixin block($br) {
+	background: #FFFFFF;
+	box-shadow: 10px 30px 20px rgba(0, 0, 0, 0.05);
+	border-radius: $br;
+}
+
 
 
 %flex-center {
@@ -102,12 +108,16 @@ body {
 	background: #FFFBFB;
 }
 
-h1, h4 {
+h1, h3, h4 {
 	font-family: $Caveat;
 	font-weight: 700;
 }
 h1 {
 	@include font(120px, 150%);
+	color: #2E1F3C;
+}
+h3 {
+	@include font(50px, 63%);
 	color: #2E1F3C;
 }
 h4 {
@@ -962,6 +972,56 @@ h4 {
 				width: 75px;
 				height: 75px;
 			}
+		}
+	}
+}
+
+
+
+.text16x24 {
+	@include flex(flex, column, 24px, stretch, flex-start);
+
+	@include font(16px, 150%);
+	color: #2E1F3C;
+}
+
+
+
+.hi {
+
+	&__container {
+		position: relative;
+
+		max-width: 1515px;
+		padding: 145px 20px 155px 20px;
+		@include flex(flex, row, 0, flex-start, flex-end);
+		margin: 0 auto;
+	}
+	&__image {
+		position: absolute;
+		top: 120px;
+		left: 20px; 
+
+		width: 53.35%;
+	}
+	&__content {
+		width: 50.1%;
+		position: relative;
+
+		h3 {
+			text-align: center;
+			margin-bottom: 25px;
+		}
+	}
+	&__block {
+		min-height: 442px;
+		padding: 30px;
+		@extend %flex-center;
+
+		@include block(20px);
+
+		.text16x24 {
+			max-width: 598px;
 		}
 	}
 }
