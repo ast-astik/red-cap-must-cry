@@ -108,12 +108,16 @@ body {
 	background: #FFFBFB;
 }
 
-h1, h3, h4 {
+h1, h2, h3, h4 {
 	font-family: $Caveat;
 	font-weight: 700;
 }
 h1 {
 	@include font(120px, 150%);
+	color: #2E1F3C;
+}
+h2 {
+	@include font(80px, 101px);
 	color: #2E1F3C;
 }
 h3 {
@@ -1345,3 +1349,88 @@ h4 {
 		}
 	}
 }
+
+
+
+.subscribe {
+
+	&__container {
+		position: relative;
+
+		max-width: 1324px;
+		margin: 0 auto;
+	}
+	&__content {
+		position: relative;
+		z-index: 2;
+
+		padding: 130px 0;
+		@include flex(flex, column, 0, center, flex-start);
+
+		
+		h2 {
+			max-width: 1000px;
+			text-align: center;
+		}
+
+		.purple-btn {
+			margin: 23.25px 0 26px 0;
+
+			width: 188px;
+			height: 58px;
+		}
+	}
+	&__btns {
+		width: 388px;
+		@include flex(inline-flex, row, 5px 11px, flex-start, center);
+		flex-wrap: wrap;
+
+		a {
+			width: 188px;
+			height: 58px;
+			@extend %flex-center;
+
+			background: #fff;
+			border-radius: 50px;
+			border: 2px solid #EE5646;
+
+			img:nth-child(1) {
+				display: none;
+			}
+		}
+		a:nth-child(1) {
+			img {
+				height: 40.56px;
+			}
+		}
+
+		a:nth-child(2) {
+			img {
+				height: 36.46px;
+			}
+		}
+	}
+	&__download-txt {
+		margin-top: 17.75px;
+		width: 234px;
+	}
+
+	&__bg1,
+	&__bg2 {
+		position: absolute;
+		z-index: 1;
+	}
+	&__bg1 {
+		bottom: 140px;
+		left: 0px;
+
+		width: 23.89%;
+	}
+	&__bg2 {
+		bottom: 130px;
+		right: 0;
+
+		width: 18.50%;
+	}
+}
+	
