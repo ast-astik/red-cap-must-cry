@@ -59,3 +59,14 @@ function popup(popupClass, action, successPopupName) {
 		popupElem.classList.remove("open");
 	}	
 }
+
+function playVideo() {
+
+	let videoElem = document.querySelector(".video-history__video video");
+	let buttonElem = document.querySelector(".video-history__video button");
+
+	buttonElem.style.visibility = "hidden";
+	buttonElem.style.opacity = "0";
+	videoElem.play();
+	videoElem.setAttribute('controls', '');
+}
