@@ -1576,8 +1576,9 @@ h4 {
 .what-to-do {
 
 	&__container {
-		max-width: 1400px;
+		max-width: 1440px;
 		width: 100%;
+		padding: 0 20px;
 		margin: 0 auto;
 
 		h2 {
@@ -1593,11 +1594,14 @@ h4 {
 		color: #2E1F3C;
 	}
 	&__content {
+		position: relative;
+		z-index: 2;
+
 		@include flex(flex, row, 0, flex-start, space);
 	}
 	&__items {
 		width: 100%;
-		@include flex(flex, row, 24px, center, stretch);
+		@include flex(flex, row, 24px, stretch, stretch);
 	}
 	&__item {
 		width: 22.619047%;
@@ -1625,25 +1629,154 @@ h4 {
 	&__text-btn {
 		padding-left: 52px;
 		width: 26.9285714%;
+		@include flex(flex, column, 24px, flex-start, center);
 
 		p {
-			margin-bottom: 24px;
-
 			@include font(16px, 150%);
 			color: #495464;
 		}
 
 		.purple-btn {
-			width: 260px;
+			width: 100%;
+			max-width: 260px;
 		}
 	}
 	&__cup-image {
+		position: relative;
+		z-index: 1;
+
 		text-align: center;
 
 		img {
-			height: 310px;
+			width: 54.38714285%;
 			margin-top: -22px;
 		}
 	}
 }
-.purple-btn {}
+
+@media (max-width: 1100px) {
+	.what-to-do {
+		&__item {
+			padding: 38px 20px;
+		}
+		&__text-btn {
+			padding-left: 20px;
+		}
+	}
+}
+
+@media (max-width: 991.5px) {
+	.what-to-do {
+		&__container {
+			max-width: 820px;
+		}
+		&__subtitle {
+			margin: 35px 0 20px 0;
+			@include font(45px, 58px);
+		}
+		&__items {
+			flex-wrap: wrap;
+		}
+		&__item, &__text-btn {
+			width: calc(50% - 12px);
+		}
+		&__item {
+			padding: 45px 27px;
+		}
+		&__text-btn {
+			padding: 0 40px;
+		}
+		&__cup-image {
+			img {
+				width: 60%;
+			}
+		}
+	}
+}
+
+@media (max-width: 767.5px) {
+	.what-to-do {
+		&__subtitle {
+			margin: 10px 0 14px 0;
+			@include font(35px, 45px);
+		}
+		&__item {
+			padding: 25px 15px;
+			min-height: 200px;
+
+			span {
+				@include font(45px, 57px);
+			}
+		}
+		&__text-btn {
+			padding: 0 10px;
+		}
+		&__cup-image {
+			img {
+				margin-top: 0;
+				width: 65%;
+			}
+		}
+	}
+}
+
+@media (max-width: 575.5px) {
+	.what-to-do {
+		&__container {
+			max-width: 380px;
+		}
+		&__subtitle {
+			margin: 15px 0 14px 0;
+			@include font(25px, 32px);
+			
+			text-align: center;
+		}
+		&__items {
+			gap: 10px;
+		}
+		&__item, &__text-btn {
+			width: 100%;
+		}
+		&__item {
+			padding: 27px 29px;
+			min-height: auto;
+
+			border: 3px solid #D7E2F1;
+
+			span {
+				@include font(30px, 76px);
+			}
+
+			p {
+				@include font(16px, 32px);
+			}
+		}
+		&__text-btn {
+			padding: 10px 0 0 0;
+			gap: 15px;
+
+			.purple-btn {
+				max-width: none;
+			}
+		}
+		&__cup-image {
+			padding-top: 10px;
+
+			img {
+				width: 319px;
+			}
+		}
+	}
+}
+
+@media (max-width: 360px) {
+	.what-to-do {
+		&__cup-image {
+			overflow: hidden;
+
+			img {
+				margin-left: -20px;
+			}
+		}
+	}
+}
