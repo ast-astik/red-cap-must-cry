@@ -21,7 +21,7 @@ function popup(popupClass, action, successPopupName) {
 	if (successPopupName) {
 
 		// Email validation
-		if (successPopupName == "subscribe") {
+		if (successPopupName == "subscribe" && action == "open") {
 
 			let popupSubscribeInput = document.querySelector(".popup-subscribe__input input");
 			const EMAIL_REGEXP = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu;
@@ -32,6 +32,7 @@ function popup(popupClass, action, successPopupName) {
 
 			if (EMAIL_REGEXP.test(popupSubscribeInput.value)) {
 				popup('.popup-subscribe', 'close');
+				popupSubscribeInput.value = "";
 			} else {
 				popupSubscribeInput.style.borderColor = "#EE5646";
 				popupSubscribeInput.style.color = "#EE5646";

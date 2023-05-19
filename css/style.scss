@@ -886,6 +886,11 @@ h4 {
 		@extend %flex-center;
 		flex-direction: column;
 
+		img {
+			width: 104.49px;
+			height: 104.52px;
+		}
+
 		h4 {
 			text-align: center;
 		}
@@ -905,5 +910,58 @@ h4 {
 
 	.popup-success__container {
 		transform: scale(1);
+	}
+}
+
+@media (max-width: 991.5px) {
+	.popup-success {
+		&__container {
+			max-height: 420px;
+		}
+	}
+}
+
+@media (max-width: 767.5px) {
+	.popup-success {
+		&__container {
+			max-height: 390px;
+		}
+		&__content {
+			max-width: 400px;
+
+			img {
+				width: 90px;
+				height: 90px;
+			}
+
+			&_subscribe {
+				h4 {
+					margin-top: 38px;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 575.5px) {
+	.popup-success {
+		padding: 40px 15px;
+
+		&__container {
+			padding: 0 15px;
+			max-height: 330px;
+		}
+		&__close-btn {
+			top: 25px;
+			right: 30px;
+		}
+		&__content {
+			max-width: 350px;
+
+			img {
+				width: 75px;
+				height: 75px;
+			}
+		}
 	}
 }
