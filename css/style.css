@@ -139,10 +139,16 @@ h4 {
 	h1 {
 		font-size: 65px;
 	}
+	h4 {
+		font-size: 30px;
+	}
 }
 @media (max-width: 575.5px) {
 	h1 {
 		font-size: 44px;
+	}
+	h4 {
+		font-size: 26px;
 	}
 }
 .wrapper {
@@ -651,6 +657,13 @@ h4 {
 	border-radius: 100px;
 }
 
+@media (max-width: 575.5px) {
+	.orange-btn {
+		height: 45px;
+		font-size: 16px;
+		line-height: 20px;
+	}
+}
 .popup-subscribe {
 	position: fixed;
 	z-index: 20;
@@ -740,4 +753,47 @@ h4 {
 .popup-subscribe.open .popup-subscribe__container {
 	-webkit-transform: scale(1);
 	        transform: scale(1);
+}
+
+@media (max-width: 991.5px) {
+	.popup-subscribe__container {
+		max-height: 550px;
+	}
+}
+@media (max-width: 767.5px) {
+	.popup-subscribe__container {
+		max-height: 500px;
+	}
+	.popup-subscribe__content {
+		max-width: 400px;
+	}
+	.popup-subscribe__input {
+		margin: 30px 0;
+	}
+}
+@media (max-width: 575.5px) {
+	.popup-subscribe {
+		padding: 40px 15px;
+	}
+	.popup-subscribe__container {
+		padding: 0 15px;
+		max-height: 380px;
+	}
+	.popup-subscribe__close-btn {
+		top: 25px;
+		right: 30px;
+	}
+	.popup-subscribe__content .orange-btn {
+		width: 150px;
+	}
+	.popup-subscribe__input {
+		gap: 15px;
+	}
+	.popup-subscribe__input span {
+		font-size: 22px;
+	}
+	.popup-subscribe__input input {
+		width: calc(100% - 50px - 15px);
+		font-size: 22px;
+	}
 }

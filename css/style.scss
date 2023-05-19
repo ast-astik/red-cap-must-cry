@@ -101,11 +101,17 @@ h4 {
 	h1 {
 		font-size: 65px;
 	}
+	h4 {
+		font-size: 30px;
+	}
 }
 
 @media (max-width: 575.5px) {
 	h1 {
 		font-size: 44px;
+	}
+	h4 {
+		font-size: 26px;
 	}
 }
 
@@ -690,6 +696,14 @@ h4 {
 	border-radius: 100px;
 }
 
+@media (max-width: 575.5px) {
+	.orange-btn {
+		height: 45px;
+
+		@include font(16px, 20px);
+	}
+}
+
 
 
 .popup-subscribe {
@@ -777,4 +791,61 @@ h4 {
 	.popup-subscribe__container {
 		transform: scale(1);
 	}
-}	
+}
+
+@media (max-width: 991.5px) {
+	.popup-subscribe {
+		&__container {
+			max-height: 550px;
+		}
+	}
+}
+
+@media (max-width: 767.5px) {
+	.popup-subscribe {
+
+		&__container {
+			max-height: 500px;
+		}
+		&__content {
+			max-width: 400px;
+		}
+		&__input {
+			margin: 30px 0;
+		}
+	}
+}
+
+@media (max-width: 575.5px) {
+	.popup-subscribe {
+		padding: 40px 15px;
+
+		&__container {
+			padding: 0 15px;
+			max-height: 380px;
+		}
+		&__close-btn {
+			top: 25px;
+			right: 30px;
+		}
+		&__content {
+
+			.orange-btn {
+				width: 150px;
+			}
+		}
+		&__input {
+			gap: 15px;
+
+			span {
+				font-size: 22px;
+			}
+
+			input {
+				width: calc(100% - 50px - 15px);
+
+				font-size: 22px;
+			}
+		}
+	}
+}
