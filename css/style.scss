@@ -1402,7 +1402,6 @@ h4 {
 			height: 58px;
 			@extend %flex-center;
 
-			background: #fff;
 			border-radius: 50px;
 			border: 2px solid #EE5646;
 
@@ -1571,3 +1570,80 @@ h4 {
 		}
 	}
 }
+
+
+
+.what-to-do {
+
+	&__container {
+		max-width: 1400px;
+		width: 100%;
+		margin: 0 auto;
+
+		h2 {
+			text-align: center;
+		}
+	}
+	&__subtitle {
+		margin: 41px 0 20px 0;
+
+		font-family: $Caveat;
+		@include font(55px, 69px);
+		font-weight: 700;
+		color: #2E1F3C;
+	}
+	&__content {
+		@include flex(flex, row, 0, flex-start, space);
+	}
+	&__items {
+		width: 100%;
+		@include flex(flex, row, 24px, center, stretch);
+	}
+	&__item {
+		width: 22.619047%;
+		padding: 45px 27px;
+		min-height: 256px;
+
+		border: 5px solid #D7E2F1;
+		border-radius: 24px;
+
+		span {
+			@include font(60px, 76px);
+			color: #EE5646;
+			letter-spacing: 0.5px;
+			font-weight: 700;
+		}
+
+		p {
+			margin-top: 16px;
+
+			@include font(20px, 32px);
+			font-weight: 500;
+			color: #495464;
+		}
+	}
+	&__text-btn {
+		padding-left: 52px;
+		width: 26.9285714%;
+
+		p {
+			margin-bottom: 24px;
+
+			@include font(16px, 150%);
+			color: #495464;
+		}
+
+		.purple-btn {
+			width: 260px;
+		}
+	}
+	&__cup-image {
+		text-align: center;
+
+		img {
+			height: 310px;
+			margin-top: -22px;
+		}
+	}
+}
+.purple-btn {}
