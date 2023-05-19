@@ -15,12 +15,46 @@ function burgerMenu(value) {
 	if (document.querySelector(".header__language-content_open")) toggleLanguageMenu();
 }
 
-function popup(popupClass, action) {
-	let popup = document.querySelector(popupClass);
+function popup(popupClass, action, successPopupName) {
+	let popupElem = document.querySelector(popupClass);
+
+	if (successPopupName) {
+
+		// Email validation
+		if (successPopupName == "subscribe") {
+
+			let popupSubscribeInput = document.querySelector(".popup-subscribe__input input");
+			const EMAIL_REGEXP = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu;
+
+			function isEmailValid(value) {
+			 	return EMAIL_REGEXP.test(value);
+			}
+
+			if (EMAIL_REGEXP.test(popupSubscribeInput.value)) {
+				popup('.popup-subscribe', 'close');
+			} else {
+				popupSubscribeInput.style.borderColor = "#EE5646";
+				popupSubscribeInput.style.color = "#EE5646";
+				setTimeout(() => {
+					popupSubscribeInput.style.borderColor = "";
+					popupSubscribeInput.style.color = "";
+				}, 800);
+				return;
+			}
+		}
+
+		let popupContent = document.querySelector(`.popup-success__content_${successPopupName}`);
+
+		if (action == "open") {
+			popupContent.style.display = "flex";
+		} else {
+			popupContent.style.display = "";
+		}
+	}
 
 	if (action == "open") {
-		popup.classList.add("open");
+		popupElem.classList.add("open");
 	} else {
-		popup.classList.remove("open");
-	}
+		popupElem.classList.remove("open");
+	}	
 }

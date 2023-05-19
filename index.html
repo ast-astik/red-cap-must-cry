@@ -31,7 +31,17 @@
 							<span>E-mail</span>
 							<input type="email">
 						</label>
-						<button class="orange-btn">Submit</button>
+						<button class="orange-btn" onClick="popup('.popup-success', 'open', 'subscribe');">Submit</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="popup-success">
+				<div class="popup-success__container">
+					<button class="popup-success__close-btn" onClick="popup('.popup-success', 'close', 'subscribe');"></button>
+					<div class="popup-success__content popup-success__content_subscribe">
+						<img src="img/check-mark-circle.svg" alt="Check mark">
+						<h4>Теперь вы подписаны на наши обновления</h4>
 					</div>
 				</div>
 			</div>
