@@ -2238,11 +2238,12 @@ h4 {
 
 
 .about-authors {
+	overflow: hidden;
 
 	&__container {
 		max-width: 1450px;
 		width: 100%;
-		padding: 0 20px;
+		padding: 50px 20px 0 20px;
 		margin: 0 auto;
 
 		h1 {
@@ -2261,8 +2262,8 @@ h4 {
 			position: relative;
 			left: -69px;
 
-			width: 760px;
-			height: 565px;
+			width: 53.90%;
+			padding-top: 40%;
 
 			font-size: 565px;
 
@@ -2310,7 +2311,7 @@ h4 {
 		&-block {
 			position: relative;
 
-			padding: 55px 0 50px 0;
+			padding: 55px 30px 50px 30px;
 			@extend %flex-center;
 
 			@include block(20px);
@@ -2337,8 +2338,11 @@ h4 {
 	}
 	&__item:nth-child(2) {
 		.about-authors__item-image {
-			transform: rotate(13.32deg);
+			left: -30px;
+
 			margin-left: auto;
+
+			transform: rotate(13.32deg);
 
 			span {
 				right: 41%;
@@ -2349,4 +2353,254 @@ h4 {
 			left: 0;
 		}
 	}	
+}
+
+@media (max-width: 1500px) {
+	.about-authors {
+		&__item {
+			&-image {
+				left: -25px;
+			}
+		}
+	}
+}
+
+@media (max-width: 1400px) {
+	.about-authors {
+		&__container {
+			padding: 40px 20px 0 20px;
+		}
+		&__items {
+			padding: 20px 0 50px;
+		}
+		&__item {
+			&-content {
+				h3 {
+					padding-left: 40px;
+					margin-bottom: 20px;
+				}
+			}
+		}
+		&__item:nth-child(2) {
+			padding: 90px 0;
+		}
+	}
+}
+
+@media (max-width: 1300px) {
+	.about-authors {
+		&__item {
+			&-image {
+				font-size: 490px;
+			}
+		}
+	}
+}
+
+@media (max-width: 1160px) {
+	.about-authors {
+		&__item {
+			&-image {
+				font-size: 440px;
+			}
+		}
+	}
+}
+
+@media (max-width: 1040px) {
+	.about-authors {
+		&__item {
+			&-image {
+				font-size: 390px;
+			}
+		}
+	}
+}
+
+@media (max-width: 991.5px) {
+	.about-authors {
+
+		&__items {
+			padding: 20px 0 110px;
+		}
+		&__item {
+			&-content {
+				h3 {
+					padding-left: 30px;
+					margin-bottom: 0;
+				}
+			}
+			&-block {
+				padding: 40px 25px 40px 25px;
+
+				&:after {
+					top: -45px;
+					right: -20px;
+
+					width: 100px;
+					height: 100px;
+				}
+					
+			}
+		}
+		&__item:nth-child(2) {
+			padding: 150px 0 210px 0;
+		}
+	}
+}
+
+@media (max-width: 914px) {
+	.about-authors {
+		&__item {
+			&-image {
+				font-size: 340px;
+			}
+		}
+	}
+}
+
+@media (max-width: 800px) {
+	.about-authors {
+		&__item {
+			&-image {
+				font-size: 295px;
+			}
+		}
+	}
+}
+
+@media (max-width: 767.5px) {
+	.about-authors {
+
+		&__items {
+			padding: 10px 0 80px;
+		}
+		&__item {
+			margin-bottom: 30px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			&-image {
+				left: 0;
+
+				max-width: 500px;
+				width: 100%;
+				padding-top: 374px;
+				margin: 0 auto;
+
+				font-size: 374px;
+
+				transform: translate(-4%, 0);
+			}
+			&-content {
+				position: relative;
+				top: 0;
+				right: 0;
+
+				width: 100%;
+				max-width: 600px;
+				margin: -25px auto 0 auto;
+
+				transform: translate(0);
+
+				h3 {
+					padding-left: 0;
+
+					text-align: center;
+					@include font(35px, 44px);
+				}
+			}
+		}
+		&__item:nth-child(2) {
+			padding: 0;
+
+			.about-authors__item-image {
+				left: 0;
+				margin: 0 auto;
+
+				transform: rotate(0deg);
+			}
+			.about-authors__item-content {
+				left: 0;
+			}
+		}
+	}
+}
+
+@media (max-width: 575.5px) {
+	.about-authors {
+
+		&__container {
+
+			h1 {
+				margin-bottom: 0;
+
+				@include font(55px, 150%);
+			}
+		}
+		&__items {
+			padding: 8.2px 0 70px;
+		}
+		&__item {
+			margin-bottom: 13.18px;
+
+			&-image {
+				max-width: none;
+				padding-top: 74.3%;
+			}
+			&-block {
+				padding: 30px 20px;
+
+				&:after {
+					top: -12px;
+					right: -35px;
+
+					width: 90px;
+					height: 90px;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 500px) {
+	.about-authors {
+		&__item {
+			&-image {
+				font-size: 330px;
+			}
+		}
+	}
+}
+
+@media (max-width: 450px) {
+	.about-authors {
+		&__item {
+			&-image {
+				font-size: 300px;
+			}
+		}
+	}
+}
+
+@media (max-width: 400px) {
+	.about-authors {
+		&__item {
+			&-image {
+				font-size: 260px;
+			}
+		}
+	}
+}
+
+@media (max-width: 360px) {
+	.about-authors {
+		&__item {
+			&-image {
+				font-size: 230px;
+			}
+		}
+	}
 }

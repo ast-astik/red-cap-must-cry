@@ -2279,10 +2279,13 @@ h4 {
 		gap: 15px;
 	}
 }
+.about-authors {
+	overflow: hidden;
+}
 .about-authors__container {
 	max-width: 1450px;
 	width: 100%;
-	padding: 0 20px;
+	padding: 50px 20px 0 20px;
 	margin: 0 auto;
 }
 .about-authors__container h1 {
@@ -2298,8 +2301,8 @@ h4 {
 .about-authors__item-image {
 	position: relative;
 	left: -69px;
-	width: 760px;
-	height: 565px;
+	width: 53.9%;
+	padding-top: 40%;
 	font-size: 565px;
 	background: url("../img/about-author__bg.png") no-repeat;
 	background-size: 100% 100%;
@@ -2340,7 +2343,7 @@ h4 {
 }
 .about-authors__item-block {
 	position: relative;
-	padding: 55px 0 50px 0;
+	padding: 55px 30px 50px 30px;
 	background: #FFFFFF;
 	-webkit-box-shadow: 10px 30px 20px rgba(0, 0, 0, 0.05);
 	        box-shadow: 10px 30px 20px rgba(0, 0, 0, 0.05);
@@ -2361,9 +2364,10 @@ h4 {
 	max-width: 598px;
 }
 .about-authors__item:nth-child(2) .about-authors__item-image {
+	left: -30px;
+	margin-left: auto;
 	-webkit-transform: rotate(13.32deg);
 	        transform: rotate(13.32deg);
-	margin-left: auto;
 }
 .about-authors__item:nth-child(2) .about-authors__item-image span {
 	right: 41%;
@@ -2371,4 +2375,166 @@ h4 {
 .about-authors__item:nth-child(2) .about-authors__item-content {
 	right: auto;
 	left: 0;
+}
+
+@media (max-width: 1500px) {
+	.about-authors__item-image {
+		left: -25px;
+	}
+}
+@media (max-width: 1400px) {
+	.about-authors__container {
+		padding: 40px 20px 0 20px;
+	}
+	.about-authors__items {
+		padding: 20px 0 50px;
+	}
+	.about-authors__item-content h3 {
+		padding-left: 40px;
+		margin-bottom: 20px;
+	}
+	.about-authors__item:nth-child(2) {
+		padding: 90px 0;
+	}
+}
+@media (max-width: 1300px) {
+	.about-authors__item-image {
+		font-size: 490px;
+	}
+}
+@media (max-width: 1160px) {
+	.about-authors__item-image {
+		font-size: 440px;
+	}
+}
+@media (max-width: 1040px) {
+	.about-authors__item-image {
+		font-size: 390px;
+	}
+}
+@media (max-width: 991.5px) {
+	.about-authors__items {
+		padding: 20px 0 110px;
+	}
+	.about-authors__item-content h3 {
+		padding-left: 30px;
+		margin-bottom: 0;
+	}
+	.about-authors__item-block {
+		padding: 40px 25px 40px 25px;
+	}
+	.about-authors__item-block:after {
+		top: -45px;
+		right: -20px;
+		width: 100px;
+		height: 100px;
+	}
+	.about-authors__item:nth-child(2) {
+		padding: 150px 0 210px 0;
+	}
+}
+@media (max-width: 914px) {
+	.about-authors__item-image {
+		font-size: 340px;
+	}
+}
+@media (max-width: 800px) {
+	.about-authors__item-image {
+		font-size: 295px;
+	}
+}
+@media (max-width: 767.5px) {
+	.about-authors__items {
+		padding: 10px 0 80px;
+	}
+	.about-authors__item {
+		margin-bottom: 30px;
+	}
+	.about-authors__item:last-child {
+		margin-bottom: 0;
+	}
+	.about-authors__item-image {
+		left: 0;
+		max-width: 500px;
+		width: 100%;
+		padding-top: 374px;
+		margin: 0 auto;
+		font-size: 374px;
+		-webkit-transform: translate(-4%, 0);
+		        transform: translate(-4%, 0);
+	}
+	.about-authors__item-content {
+		position: relative;
+		top: 0;
+		right: 0;
+		width: 100%;
+		max-width: 600px;
+		margin: -25px auto 0 auto;
+		-webkit-transform: translate(0);
+		        transform: translate(0);
+	}
+	.about-authors__item-content h3 {
+		padding-left: 0;
+		text-align: center;
+		font-size: 35px;
+		line-height: 44px;
+	}
+	.about-authors__item:nth-child(2) {
+		padding: 0;
+	}
+	.about-authors__item:nth-child(2) .about-authors__item-image {
+		left: 0;
+		margin: 0 auto;
+		-webkit-transform: rotate(0deg);
+		        transform: rotate(0deg);
+	}
+	.about-authors__item:nth-child(2) .about-authors__item-content {
+		left: 0;
+	}
+}
+@media (max-width: 575.5px) {
+	.about-authors__container h1 {
+		margin-bottom: 0;
+		font-size: 55px;
+		line-height: 150%;
+	}
+	.about-authors__items {
+		padding: 8.2px 0 70px;
+	}
+	.about-authors__item {
+		margin-bottom: 13.18px;
+	}
+	.about-authors__item-image {
+		max-width: none;
+		padding-top: 74.3%;
+	}
+	.about-authors__item-block {
+		padding: 30px 20px;
+	}
+	.about-authors__item-block:after {
+		top: -12px;
+		right: -35px;
+		width: 90px;
+		height: 90px;
+	}
+}
+@media (max-width: 500px) {
+	.about-authors__item-image {
+		font-size: 330px;
+	}
+}
+@media (max-width: 450px) {
+	.about-authors__item-image {
+		font-size: 300px;
+	}
+}
+@media (max-width: 400px) {
+	.about-authors__item-image {
+		font-size: 260px;
+	}
+}
+@media (max-width: 360px) {
+	.about-authors__item-image {
+		font-size: 230px;
+	}
 }
