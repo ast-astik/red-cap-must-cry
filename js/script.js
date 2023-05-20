@@ -74,3 +74,53 @@ function playVideo() {
 	videoElem.play();
 	videoElem.setAttribute('controls', '');
 }
+
+
+
+
+
+// -------------------------- Team Swiper ---------------------------
+let swiperTeam = document.querySelector(".team__items");
+
+function swiperStart(value) {
+
+	let swiperTeamWrapper = document.querySelector(".team__items-wrapper");
+	let swiperTeamSlides = document.querySelectorAll(".team__item");
+
+	if (value) {
+		swiperTeam.classList.add("swiper");
+		swiperTeamWrapper.classList.add("swiper-wrapper");
+		swiperTeamSlides.forEach(slide => {
+			slide.classList.add("swiper-slide");
+		});
+
+		const swiper = new Swiper('.team__items', {
+			slidesPerView: "auto",
+            centeredSlides: true,
+            resistanceRatio: 0,
+            navigation: {
+			    nextEl: '.team__items-btn-next',
+			   	prevEl: '.team__items-btn-prev',
+			},
+		});
+
+	} else {
+		swiperTeam.classList.remove("swiper");
+		swiperTeamWrapper.classList.remove("swiper-wrapper");
+		swiperTeamSlides.forEach(slide => {
+			slide.classList.remove("swiper-slide");
+			slide.removeAttribute("style");
+		});
+	}
+}
+
+window.addEventListener('resize', () => {
+    if (swiperTeam) {
+    	swiperStart(window.innerWidth <= 575.5);
+    }
+});
+
+if (swiperTeam) {
+	swiperStart(window.innerWidth <= 575.5);
+}
+// ------------------------------------------------------------------
