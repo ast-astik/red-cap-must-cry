@@ -2234,3 +2234,119 @@ h4 {
 		}
 	}
 }
+
+
+
+.about-authors {
+
+	&__container {
+		max-width: 1450px;
+		width: 100%;
+		padding: 0 20px;
+		margin: 0 auto;
+
+		h1 {
+			margin-bottom: 15px;
+
+			text-align: center;
+		}
+	}
+	&__items {
+		padding: 70px 0;
+	}
+	&__item {
+		position: relative;
+
+		&-image {
+			position: relative;
+			left: -69px;
+
+			width: 760px;
+			height: 565px;
+
+			font-size: 565px;
+
+			background: url("../img/about-author__bg.png") no-repeat;
+			background-size: 100% 100%;
+
+			transform: rotate(-13.32deg);
+
+			span {
+				position: absolute;
+				top: 6.4%;
+				right: 34.5%;
+
+				font-family: $Caveat;
+				@include font(4.39809%, 124.75%);
+				font-weight: 700;
+				text-transform: uppercase;
+				color: #ED6B60;
+			}
+			img {
+				position: absolute;
+				top: 14.5%;
+				right: 9.5%;
+
+				width: 73%;
+				height: 64%;
+
+				object-fit: cover;
+			}
+		}
+		&-content {
+			position: absolute;
+			right: 0;
+			top: 45%;
+
+			width: 52.41%;
+
+			transform: translate(0, -50%);
+
+			h3 {
+				padding-left: 50px;
+				margin-bottom: 25.25px;
+			}
+		}
+		&-block {
+			position: relative;
+
+			padding: 55px 0 50px 0;
+			@extend %flex-center;
+
+			@include block(20px);
+
+			&:after {
+				content: "";
+
+				position: absolute;
+				top: -73px;
+				right: -32px;
+
+				display: inline-block;
+				width: 152px;
+				height: 152px;
+
+				background: url("../img/needle.png") no-repeat;
+				background-size: cover;
+			}
+
+			.text16x24 {
+				max-width: 598px;
+			}
+		}
+	}
+	&__item:nth-child(2) {
+		.about-authors__item-image {
+			transform: rotate(13.32deg);
+			margin-left: auto;
+
+			span {
+				right: 41%;
+			}
+		}
+		.about-authors__item-content {
+			right: auto;
+			left: 0;
+		}
+	}	
+}

@@ -59,10 +59,10 @@
 					
 					<nav class="header__menu">
 						<ul>
-							<li class="active">
+							<li>
 								<a href="index.html">Об игре</a>
 							</li>
-							<li>
+							<li class="active">
 								<a href="about-authors.html">Об авторах</a>
 							</li>
 							<li>
@@ -121,108 +121,54 @@
 		
 			<main class="main">
 
-				<section class="initial">
-					<div class="initial__container">
-						<img class="initial__bg1" src="img/bike.png" alt="Bike">
-						<img class="initial__bg2" src="img/book.png" alt="Book">
-						<div class="initial__content">
-							<h1>Red Cap Must Cry</h1>
-							<p>social mobile game</p>
-							<div class="initial__btns">
-								<a href="#">
-									<img src="img/app-store.svg" alt="App store">
-								</a>
-								<a href="#">
-									<img src="img/google-play.svg" alt="Google Play">
-								</a>
-								<button class="purple-btn" onClick="popup('.popup-subscribe', 'open');">Подписаться</button>
-							</div>
-						</div>
-					</div>
-				</section>
-
-				<section class="hi">
-					<div class="hi__container">
-						<img class="hi__image" src="img/hi__image.png" alt="Remove photo">
-						<div class="hi__content">
-							<h3>Привет, меня зовут Мальвина!</h3>
-							<div class="hi__block">
-								<div class="text16x24">
-									<p>Мне 13 лет. У меня самая обычная семья и я их люблю. Я хожу в школу, занимаюсь музыкой, люблю болтать с Лиззи - она моя лучшая подруга. Вместе мы воюем с мальчишками на вилле, у меня есть велосипед, а иногда я навещаю дедушку. Словно Красная Шапочка...</p>
-									<p><b>Казалось бы что может пойти не так? Но за счастливым фасадом скрывается ужасная тайна...</b></p>
-									<p>Мобильная игра по роману немецкой писательницы Беаты Терезы Ханики. В этой игре мы узнаем историю девочки по имени Мальвина, которая хранит маленький секрет с запахом сильно пахнущего сыра и стаканом красного напитка на столе. Что скрывает Мальвина? Чтобы найти ответ, вам нужно погрузиться в историю, полную тайн, сказок и... реальности.</p>
+				<section class="about-authors">
+					<div class="about-authors__container">
+						<h1>Об авторах</h1>
+						<div class="about-authors__items">
+							<article class="about-authors__item">
+								<div class="about-authors__item-image">
+									<span>beata teresa</span>
+									<img src="img/about-author__photo.png" alt="Author">
 								</div>
-							</div>
-						</div>
-					</div>
-				</section>
-
-				<section class="video-history">
-					<div class="video-history__container">
-						<div class="video-history__video">
-							<video preload="none" poster="img/video.png">
-								<source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-								Your browser does not support the video tag.
-							</video>
-							<button onClick="playVideo();">
-								<img src="img/play.svg" alt="Play button">
-								<span>Play</span>
-							</button>
-						</div>
-						<div class="video-history__block">
-							<h3>Я расскажу тебе свою историю, а ты помоги мне выбраться из кошмара</h3>
-						</div>
-					</div>
-				</section>
-
-				<section class="subscribe">
-					<div class="subscribe__container">
-						<img class="subscribe__bg1" src="img/pen.png" alt="Pen">
-						<img class="subscribe__bg2" src="img/wineglass.png" alt="Wineglass">
-						<div class="subscribe__content">
-							<h2>Подписывайся на обновления, чтобы узнать о выходе первым!</h2>
-							<button class="purple-btn" onClick="popup('.popup-subscribe', 'open');">Подписаться</button>
-							<div class="subscribe__btns">
-								<a href="#">
-									<img src="img/app-store.svg" alt="App store">
-									<img src="img/app-store_orange.svg" alt="App store">
-								</a>
-								<a href="#">
-									<img src="img/google-play.svg" alt="Google Play">
-									<img src="img/google-play_orange.svg" alt="Google Play">
-								</a>
-							</div>
-							<img class="subscribe__download-txt" src="img/Download.png" alt="Download...">
-						</div>
-					</div>
-				</section>
-
-				<section class="what-to-do">
-					<div class="what-to-do__container">
-						<h2>Что делать, если?</h2>
-						<p class="what-to-do__subtitle">Немного статистики:</p>
-						<div class="what-to-do__content">
-							<div class="what-to-do__items">
-								<div class="what-to-do__item">
-									<span>~70%</span>
-									<p>Жертв дети из “счастливых” семей</p>
+								<div class="about-authors__item-content">
+									<h3>Беата Тереза Ханика</h3>
+									<div class="about-authors__item-block">
+										<div class="text16x24">
+											<p>Бывшая фотомодель, писатель. Ее дебютная повесть «Скажи, Красная Шапочка» получила несколько премий, в том числе была номинирована на Немецкую детскую литературную премию.</p>
+										</div>
+									</div>
 								</div>
-								<div class="what-to-do__item">
-									<span>17M</span>
-									<p>Burger eaters and counting</p>
+							</article>
+							<article class="about-authors__item">
+								<div class="about-authors__item-image">
+									<span>Oleg</span>
+									<img src="img/about-author__photo.png" alt="Author">
 								</div>
-								<div class="what-to-do__item">
-									<span>+95%</span>
-									<p>Customer satisfaction</p>
+								<div class="about-authors__item-content">
+									<h3>Олег Христолюбский</h3>
+									<div class="about-authors__item-block">
+										<div class="text16x24">
+											<p><b>Режиссер, продюсер, сценарист, концепт-мейкер. (Берлин)</b></p>
+											<p>Режиссёр документальных и игровых фильмов. В театре работает в направлении сайт-специфик театра, инсталляций, аудио-променадов и диджитал. В своих работах опирается на сюрреальные образы и визуальные метафоры. Также огромное место занимает работа с музыкой, песней, ритмом.</p>
+										</div>
+									</div>
 								</div>
-								<div class="what-to-do__text-btn">
-									<p>Если ты чувствуешь, что что-то не так, ознокомься  с рекомендациями психолога</p>
-									<a href="#" class="purple-btn">Библиотека советов</a>
+							</article>
+							<article class="about-authors__item">
+								<div class="about-authors__item-image">
+									<span>ХомоКосмос</span>
+									<img src="img/about-author__photo.png" alt="Author">
 								</div>
-							</div>
-						</div>
-						<div class="what-to-do__cup-image">
-							<img src="img/cup.png" alt="Cup">
+								<div class="about-authors__item-content">
+									<h3>ХомоКосмос</h3>
+									<div class="about-authors__item-block">
+										<div class="text16x24">
+											<p><b>Независимая театральная компания "HomoCosmos" (Минск, Беларусь)</b></p>
+											<p>Инициированный в 2016 году Екатериной Солодуха (Беларусь) и Дариушем Езерским (Польша), проектный театр создает иммерсивные, партиципаторные, сайт-специфик и интимные спектакли, в центре внимания которых – Человек, тело и телесность, детабуизация социально значимых тем и обсуждение их средствами искусства.</p>
+										</div>
+									</div>
+								</div>
+							</article>
 						</div>
 					</div>
 				</section>

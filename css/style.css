@@ -70,7 +70,7 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: 400;
 }
 
-.footer__socials-items a, .subscribe__btns a, .hi__block, .popup-success__content, .popup-subscribe__content, .orange-btn, .initial__btns a, .header__language-btn, .purple-btn,
+.about-authors__item-block, .footer__socials-items a, .subscribe__btns a, .hi__block, .popup-success__content, .popup-subscribe__content, .orange-btn, .initial__btns a, .header__language-btn, .purple-btn,
 .purple-circle-btn, .popup-success__container, .popup-subscribe__container, .popup-success, .popup-subscribe {
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -2278,4 +2278,97 @@ h4 {
 		        flex-direction: column;
 		gap: 15px;
 	}
+}
+.about-authors__container {
+	max-width: 1450px;
+	width: 100%;
+	padding: 0 20px;
+	margin: 0 auto;
+}
+.about-authors__container h1 {
+	margin-bottom: 15px;
+	text-align: center;
+}
+.about-authors__items {
+	padding: 70px 0;
+}
+.about-authors__item {
+	position: relative;
+}
+.about-authors__item-image {
+	position: relative;
+	left: -69px;
+	width: 760px;
+	height: 565px;
+	font-size: 565px;
+	background: url("../img/about-author__bg.png") no-repeat;
+	background-size: 100% 100%;
+	-webkit-transform: rotate(-13.32deg);
+	        transform: rotate(-13.32deg);
+}
+.about-authors__item-image span {
+	position: absolute;
+	top: 6.4%;
+	right: 34.5%;
+	font-family: "Caveat", cursive;
+	font-size: 4.39809%;
+	line-height: 124.75%;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: #ED6B60;
+}
+.about-authors__item-image img {
+	position: absolute;
+	top: 14.5%;
+	right: 9.5%;
+	width: 73%;
+	height: 64%;
+	-o-object-fit: cover;
+	   object-fit: cover;
+}
+.about-authors__item-content {
+	position: absolute;
+	right: 0;
+	top: 45%;
+	width: 52.41%;
+	-webkit-transform: translate(0, -50%);
+	        transform: translate(0, -50%);
+}
+.about-authors__item-content h3 {
+	padding-left: 50px;
+	margin-bottom: 25.25px;
+}
+.about-authors__item-block {
+	position: relative;
+	padding: 55px 0 50px 0;
+	background: #FFFFFF;
+	-webkit-box-shadow: 10px 30px 20px rgba(0, 0, 0, 0.05);
+	        box-shadow: 10px 30px 20px rgba(0, 0, 0, 0.05);
+	border-radius: 20px;
+}
+.about-authors__item-block:after {
+	content: "";
+	position: absolute;
+	top: -73px;
+	right: -32px;
+	display: inline-block;
+	width: 152px;
+	height: 152px;
+	background: url("../img/needle.png") no-repeat;
+	background-size: cover;
+}
+.about-authors__item-block .text16x24 {
+	max-width: 598px;
+}
+.about-authors__item:nth-child(2) .about-authors__item-image {
+	-webkit-transform: rotate(13.32deg);
+	        transform: rotate(13.32deg);
+	margin-left: auto;
+}
+.about-authors__item:nth-child(2) .about-authors__item-image span {
+	right: 41%;
+}
+.about-authors__item:nth-child(2) .about-authors__item-content {
+	right: auto;
+	left: 0;
 }
