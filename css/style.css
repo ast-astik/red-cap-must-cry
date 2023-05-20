@@ -135,12 +135,12 @@ body {
 	background: #FFFBFB;
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5 {
 	font-family: "Caveat", cursive;
 	font-weight: 700;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h5 {
 	color: #2E1F3C;
 }
 
@@ -163,6 +163,11 @@ h4 {
 	font-size: 36px;
 	line-height: 150%;
 	color: #111827;
+}
+
+h5 {
+	font-size: 30px;
+	line-height: 38px;
 }
 
 @media (max-width: 1200px) {
@@ -2537,4 +2542,66 @@ h4 {
 	.about-authors__item-image {
 		font-size: 230px;
 	}
+}
+.team__container {
+	max-width: 1416px;
+	padding: 0 20px 130px 20px;
+	width: 100%;
+	margin: 0 auto;
+}
+.team__container h2, .team__container > p {
+	text-align: center;
+}
+.team__container > p {
+	margin: 4px 0 60px 0;
+	font-size: 16px;
+	line-height: 150%;
+	font-weight: 500;
+	color: #2E1F3C;
+}
+.team__items {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+	gap: 50px 15px;
+	-webkit-box-align: start;
+	    -ms-flex-align: start;
+	        align-items: flex-start;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+}
+.team__item {
+	width: 239.12px;
+}
+.team__item-photo {
+	width: 100%;
+	height: 255.3px;
+	padding: 35px 0 0 27.14px;
+	background: url("../img/team__bg.png") no-repeat;
+	background-size: cover;
+}
+.team__item-photo img {
+	width: 182px;
+	height: 189px;
+	border-radius: 5px;
+	-o-object-fit: cover;
+	   object-fit: cover;
+}
+.team__item h5, .team__item p {
+	text-align: center;
+}
+.team__item h5 {
+	margin: 10px 0;
+}
+.team__item p {
+	font-size: 16px;
+	line-height: 150%;
+	color: #495464;
 }

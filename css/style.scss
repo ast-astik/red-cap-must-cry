@@ -116,11 +116,11 @@ body {
 	background: #FFFBFB;
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5 {
 	font-family: $Caveat;
 	font-weight: 700;
 }
-h1, h2, h3 {
+h1, h2, h3, h5 {
 	color: #2E1F3C;
 }
 h1 {
@@ -135,6 +135,9 @@ h3 {
 h4 {
 	@include font(36px, 150%);
 	color: #111827;
+}
+h5 {
+	@include font(30px, 38px);
 }
 
 @media (max-width: 1200px) {
@@ -2604,3 +2607,66 @@ h4 {
 		}
 	}
 }
+
+
+
+.team {
+
+	&__container {
+		max-width: 1416px;
+		padding: 0 20px 130px 20px;
+		width: 100%;
+		margin: 0 auto;
+
+		h2, & > p {
+			text-align: center;
+		}
+
+		& > p {
+			margin: 4px 0 60px 0;
+			@include font(16px, 150%);
+			font-weight: 500;
+			color: #2E1F3C;
+		}
+	}
+	&__items {
+		@include flex(flex, row, 50px 15px, flex-start, space-between);
+		flex-wrap: wrap;
+	}
+	&__item {
+		width: 239.12px;
+
+		&-photo {
+			width: 100%;
+			height: 255.3px;
+			padding: 35px 0 0 27.14px;
+
+			background: url("../img/team__bg.png") no-repeat;
+			background-size: cover;
+
+			img {
+				width: 182px;
+				height: 189px;
+
+				border-radius: 5px;
+
+				object-fit: cover;
+			}
+		}
+
+		h5, p {
+			text-align: center;
+		}
+
+		h5 {
+			margin: 10px 0;
+		}
+
+		p {
+			@include font(16px, 150%);
+			color: #495464;
+		}
+	}
+}
+	
+	
