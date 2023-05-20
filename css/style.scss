@@ -38,6 +38,14 @@ $anim: all 0.3s ease;
 	border-radius: $br;
 }
 
+@mixin grid ($g, $gtc, $gap, $ai, $jc) {
+	display: $g;
+	grid-template-columns: $gtc;
+	gap: $gap;
+	align-items: $ai;
+	justify-content: $jc;
+}
+
 
 
 %flex-center {
@@ -937,6 +945,18 @@ h4 {
 				margin-top: 44.24px;
 			}
 		}
+		&_message {
+			h4 {
+				margin: 24.24px 0 23px 0;
+			}
+
+			p {
+				@include font(16px, 150%);
+				color: #2E1F3C;
+				font-weight: 500;
+				text-align: center;
+			}
+		}
 	}
 }
 .popup-success.open {
@@ -1777,6 +1797,170 @@ h4 {
 			img {
 				margin-left: -20px;
 			}
+		}
+	}
+}
+
+
+
+.footer {
+	position: relative;
+	z-index: 2;
+
+	background: #535182;
+	mix-blend-mode: multiply;
+
+	&__container {
+		max-width: 1410px;
+		margin: 0 auto;
+	}
+	&__content {
+		padding: 85px 0 55px 0;
+		@include grid(grid, 22.83687943262411% 28.22695035460993% 48.93617021276596%, 0, start, stretch);
+		grid-template-rows: auto auto 1fr;
+	}
+	&__logo {
+		padding-top: 15px;
+		grid-column: 1/3;
+
+		img {
+			height: 190px;
+		}
+	}
+	&__form {
+		grid-column: 3/4;
+		grid-row: 1/4;
+		padding: 57px 30px 43.78px 30px;
+		@include flex (flex, column, 0, center, flex-start);
+
+		background: rgba(255, 255, 255, 0.1);
+		box-shadow: 10px 30px 20px rgba(0, 0, 0, 0.05);
+		border-radius: 20px;
+
+		h3 {
+			color: #fff;
+			text-align: center;
+		}
+
+		.orange-btn {
+			width: 188px;
+			margin: 0 auto;
+		}
+	}
+	&__inputs {
+		max-width: calc(504px + 54px);
+		width: 100%;
+		padding-right: 54px;
+		margin: 53px 0 22px 0;
+		@include flex (flex, column, 22px, flex-end, flex-start);
+	}
+	&__input {
+		@include flex (flex, row, 38px, center, flex-end);
+		width: 100%;
+
+		span,
+		input {
+			font-family: $Caveat;
+			@include font(25px, 32px);
+			font-weight: 700;
+			color: #FFF;
+		}
+
+		input {
+			width: calc(100% - 72px - 38px);
+
+			line-height: 40px;
+
+			background: transparent;
+			border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+		}
+	}
+
+	&__socials {
+		padding-top: 85px;
+	}
+	&__min-title {
+		@include font(16px, 150%);
+		letter-spacing: -0.02em;
+		color: #FFFFFF;
+
+		mix-blend-mode: normal;
+		opacity: 0.5;
+	}
+	&__socials-items {
+		margin-top: 17px;
+		@include flex (flex, row, 18px, center, stretch);
+
+		a {
+			width: 40px;
+			height: 40px;
+			@extend %flex-center;
+
+			border-radius: 40px;
+			background: #8887AA;
+
+			img {
+				width: 24px;
+				height: 24px;
+			}
+		}
+	}
+	&__email {
+		padding-top: 85px;
+
+		span {
+			display: block;
+		}
+		p {
+			display: inline-block;
+
+			margin-top: 16px;
+			padding-bottom: 13px;
+
+			@include font(18px, 22px);
+			color: #FFFFFF;
+			font-weight: 600;
+
+			border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+		}
+	}
+	&__menu {
+		grid-column: 1/3;
+		padding-top: 66px;
+
+		ul {
+			@include flex(flex, row, 62px, center, stretch);
+
+			li {
+
+				a {
+					@include font(18px, 120%);
+					letter-spacing: -0.01em;
+					font-weight: 600;
+					color: #FFFFFF;
+
+					mix-blend-mode: normal;
+				}
+			}
+		}
+	}
+	&__rights {
+		border-top: 3px solid rgba(255, 255, 255, 0.1);
+		padding: 33px 0 40px 0;
+
+		@include flex(flex, row, 0, center, space-between);
+
+		p, div a {
+			@include font(16px, 150%);
+			font-weight: 300;
+			letter-spacing: -0.02em;
+			color: #FFFFFF;
+
+			mix-blend-mode: normal;
+		}
+
+		div {
+			@include flex(flex, row, 60px, center, stretch);
 		}
 	}
 }

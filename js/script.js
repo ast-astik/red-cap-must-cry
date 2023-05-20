@@ -48,8 +48,6 @@ function popup(popupClass, action, successPopupName) {
 
 		if (action == "open") {
 			popupContent.style.display = "flex";
-		} else {
-			popupContent.style.display = "";
 		}
 	}
 
@@ -57,6 +55,12 @@ function popup(popupClass, action, successPopupName) {
 		popupElem.classList.add("open");
 	} else {
 		popupElem.classList.remove("open");
+
+		if (popupClass == ".popup-success") {
+			document.querySelectorAll(".popup-success__content").forEach(elem => {
+				elem.style.display = "";
+			});
+		}
 	}	
 }
 
