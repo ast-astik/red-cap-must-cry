@@ -1810,8 +1810,11 @@ h4 {
 	background: #535182;
 	mix-blend-mode: multiply;
 
+	overflow: hidden;
+
 	&__container {
-		max-width: 1410px;
+		max-width: 1450px;
+		padding: 0 20px;
 		margin: 0 auto;
 	}
 	&__content {
@@ -1820,17 +1823,20 @@ h4 {
 		grid-template-rows: auto auto 1fr;
 	}
 	&__logo {
-		padding-top: 15px;
+		padding: 15px 40px 0 0;
 		grid-column: 1/3;
 
 		img {
-			height: 190px;
+			max-width: 436px;
+			width: 100%;
 		}
 	}
 	&__form {
+		position: relative;
+
 		grid-column: 3/4;
 		grid-row: 1/4;
-		padding: 57px 30px 43.78px 30px;
+		padding: 57px 40px 43.78px 40px;
 		@include flex (flex, column, 0, center, flex-start);
 
 		background: rgba(255, 255, 255, 0.1);
@@ -1845,6 +1851,21 @@ h4 {
 		.orange-btn {
 			width: 188px;
 			margin: 0 auto;
+		}
+
+		&:after {
+			content: "";
+
+			position: absolute;
+			top: -8px;
+			right: -17px;
+
+			display: inline-block;
+			width: 152px;
+			height: 152px;
+
+			background: url("../img/needle.png") no-repeat;
+			background-size: cover;
 		}
 	}
 	&__inputs {
@@ -1870,6 +1891,7 @@ h4 {
 			width: calc(100% - 72px - 38px);
 
 			line-height: 40px;
+			font-weight: 600;
 
 			background: transparent;
 			border-bottom: 2px solid rgba(255, 255, 255, 0.5);
@@ -1880,6 +1902,8 @@ h4 {
 		padding-top: 85px;
 	}
 	&__min-title {
+		display: block;
+
 		@include font(16px, 150%);
 		letter-spacing: -0.02em;
 		color: #FFFFFF;
@@ -1889,7 +1913,7 @@ h4 {
 	}
 	&__socials-items {
 		margin-top: 17px;
-		@include flex (flex, row, 18px, center, stretch);
+		@include flex (inline-flex, row, 18px, center, stretch);
 
 		a {
 			width: 40px;
@@ -1906,11 +1930,8 @@ h4 {
 		}
 	}
 	&__email {
-		padding-top: 85px;
+		padding: 85px 40px 0 0;
 
-		span {
-			display: block;
-		}
 		p {
 			display: inline-block;
 
@@ -1926,10 +1947,11 @@ h4 {
 	}
 	&__menu {
 		grid-column: 1/3;
-		padding-top: 66px;
+		padding: 66px 40px 0 0;
 
 		ul {
-			@include flex(flex, row, 62px, center, stretch);
+			@include flex(flex, row, 0, center, space-between);
+			max-width: 630px;
 
 			li {
 
@@ -1961,6 +1983,252 @@ h4 {
 
 		div {
 			@include flex(flex, row, 60px, center, stretch);
+		}
+	}
+}
+
+@media (max-width: 1400px) {
+	.footer {
+		&__rights {
+			position: relative;
+			left: -20px;
+
+			padding: 33px 20px 40px 20px;
+			width: calc(100% + 40px);
+		}
+	}
+}
+
+@media (max-width: 1200px) {
+	.footer {
+
+		&__content {
+			grid-template-columns: 26% 32% 42%;
+		}
+		&__logo {
+			padding: 40px 40px 0 0;
+
+			img {
+				max-width: 380px;
+			}
+		}
+		&__form {
+			padding: 57px 33px 43.78px 33px;
+
+			&:after {
+				top: -50px;
+				right: -35px;
+				
+				width: 130px;
+				height: 130px;
+			}
+		}
+		&__inputs {
+			padding-right: 0;
+		}
+		&__input {
+			gap: 25px;
+
+			input {
+				width: calc(100% - 72px - 25px);
+			}
+		}
+	}
+}
+
+@media (max-width: 991.5px) {
+	.footer {
+		&__content {
+			padding: 65px 0 45px 0;
+			grid-template-columns: 55% 45%;
+			grid-template-rows: auto auto auto 1fr;
+		}
+		&__logo {
+			grid-column: 1/2;
+
+			img {
+				max-width: 290px;
+			}
+		}
+		&__form {
+			grid-column: 2/3;
+			grid-row: 1/5;
+			padding: 45px 20px 35px 20px;
+
+			&:after {
+				top: -45px;
+				right: -30px;
+				
+				width: 110px;
+				height: 110px;
+			}
+		}
+		&__input {
+			@include flex(flex, column, 0, stretch, flex-start);
+
+			input {
+				width: 100%;
+			}
+		}
+		&__socials {
+			padding-top: 60px;
+		}
+		&__email {
+			padding: 60px 40px 0 0;
+		}
+		&__menu {
+			padding: 60px 40px 0 0;
+			grid-column: 1/2;
+
+			ul {
+				gap: 30px 35px;
+				flex-wrap: wrap;
+				justify-content: stretch;
+
+				li:nth-child(1),
+				li:nth-child(3) {
+					width: 50%;
+				}
+				li:nth-child(2),
+				li:nth-child(4) {
+					width: calc(50% - 35px);
+				}
+			}
+		}
+		&__rights {
+			div {
+				gap: 40px;
+			}
+		}
+	}
+}
+
+@media (max-width: 767.5px) {
+	.footer {
+		&__content {
+			padding: 50px 0 38px 0;
+			grid-template-columns: 100%;
+			grid-template-rows: auto auto auto auto auto;
+		}
+		&__logo {
+			padding: 0 0 45px 0;
+			text-align: center;
+
+			img {
+				max-width: 250px;
+			}
+		}
+		&__form {
+			grid-column: 1/2;
+			grid-row: 2/3;
+			padding: 35px 45px 25px 45px;
+		}
+		&__inputs {
+			margin: 28px 0 24px 0;
+		}
+
+		&__menu {
+			grid-row: 3/4;
+			padding: 65px 40px 0 40px;
+		}
+		&__email {
+			grid-row: 4/5;
+			padding: 60px 0 0 0;
+
+			text-align: center;
+		}
+		&__socials {
+			text-align: center;
+		}
+		&__rights {
+			flex-direction: column;
+			justify-content: flex-start;
+			gap: 35px;
+
+			div {
+				gap: 60px;
+			}
+		}
+	}
+}
+
+@media (max-width: 575.5px) {
+	.footer {
+
+		&__content {
+			padding: 25px 0 30px 0;
+		}
+		&__logo {
+			padding: 0 0 35px 0;
+
+			img {
+				max-width: 180px;
+			}			
+		}
+		&__form {
+			padding: 25px 15px;
+
+			.orange-btn {
+				height: 45px;
+				width: 100%;
+			}
+
+			&:after {
+				top: -44px;
+				right: -20px;
+				
+				width: 93px;
+				height: 93px;
+			}
+		}
+		&__inputs {
+			gap: 24px;
+		}
+		&__input {
+			span,
+			input {
+				@include font(18px, 23px);
+			}
+
+			input {
+				line-height: 29px;
+			}
+		}
+		&__menu {
+			padding: 73px 0 0 0;
+
+			ul {
+				gap: 40px;
+
+				li:nth-child(1n) {
+					width: 100%;
+
+					text-align: center;
+				}
+			}
+		}
+		&__email {
+			padding: 40px 0 0 0;
+		}
+		&__socials {
+			padding: 40px 0 0 0;
+		}
+		&__socials-items {
+			gap: 20px;
+		}
+		&__rights {
+			padding: 15px 20px;
+			text-align: center;
+			gap: 15px;
+
+			& > p {
+				@include font(12px, 18px);
+			}
+
+			div {
+				flex-direction: column;
+				gap: 15px;
+			}
 		}
 	}
 }
