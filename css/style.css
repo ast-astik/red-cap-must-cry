@@ -1561,6 +1561,7 @@ h4 {
 .what-to-do__text-btn .purple-btn {
 	width: 100%;
 	max-width: 260px;
+	height: 58px;
 }
 .what-to-do__cup-image {
 	position: relative;
@@ -1663,6 +1664,7 @@ h4 {
 	}
 	.what-to-do__text-btn .purple-btn {
 		max-width: none;
+		height: 45px;
 	}
 	.what-to-do__cup-image {
 		padding-top: 10px;
