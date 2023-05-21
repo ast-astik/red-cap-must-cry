@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Red Cup Must Cry</title>
+
+		<meta charset="UTF-8">
+
+		<!-- Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+		<!-- CSS -->
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<meta name="format-detection" content="telephone=no">
+	</head>
+	<body>
+		<div class="wrapper">
+			
+			<div class="background"></div>
+
+			<div class="popup-success">
+				<div class="popup-success__container">
+					<button class="popup-success__close-btn" onClick="popup('.popup-success', 'close');"></button>
+					<div class="popup-success__content popup-success__content_message">
+						<img src="img/check-mark-circle.svg" alt="Check mark">
+						<h4>Ваше сообщение успешно отправлено!</h4>
+						<p>Наша команда свяжется с Вами в ближайшее время.</p>
+					</div>
+				</div>
+			</div>
+
+			<header class="header">
+				<div class="header__background"></div>
+				<div class="header__container">
+
+					<img src="img/logo.svg" alt="Logo" class="header__logo">
+					
+					<nav class="header__menu">
+						<ul>
+							<li>
+								<a href="index.html">Об игре</a>
+							</li>
+							<li>
+								<a href="about-authors.html">Об авторах</a>
+							</li>
+							<li class="active">
+								<a href="what-to-do-if.html">Что делать, если?</a>
+							</li>
+							<li>
+								<a href="#">Контакты</a>
+							</li>
+						</ul>
+						<button class="header__menu-close" onClick="burgerMenu('close');"></button>
+					</nav>
+					
+					<div class="header__btns">
+
+						<div class="header__language">
+							<button class="header__language-btn" onClick="toggleLanguageMenu();">EN</button>
+							<ul class="header__language-content">
+								<li class="active">
+									<a href="#">EN</a>
+								</li>
+								<li>
+									<a href="#">DE</a>
+								</li>
+								<li>
+									<a href="#">RU</a>
+								</li>
+								<li>
+									<a href="#">BY</a>
+								</li>
+							</ul>
+						</div>
+						
+						<button class="purple-btn">Поддержать проект</button>
+						
+						<div class="header__socials">
+							<a href="#" class="purple-circle-btn">
+								<img src="img/facebook.svg" alt="Facebook">
+							</a>
+							<a href="#" class="purple-circle-btn">
+								<img src="img/inst.svg" alt="Instagram">
+							</a>
+							<a href="#" class="purple-circle-btn">
+								<img src="img/in.svg" alt="Linkedin">
+							</a>
+							<a href="#" class="purple-circle-btn">
+								<img src="img/tiktok.svg" alt="TikTok">
+							</a>
+						</div>
+
+						<button class="header__burger" onClick="burgerMenu('open');"></button>
+
+					</div>
+
+				</div>
+			</header>
+		
+			<main class="main">
+
+				
+
+			</main>
+
+			<footer class="footer">
+				<div class="footer__container">
+					<div class="footer__content">
+						<div class="footer__logo">
+							<img src="img/footer__logo.svg" alt="Logo">
+						</div>
+						<div class="footer__form">
+							<h3>Связаться с нами!</h3>
+							<div class="footer__inputs">
+								<label class="footer__input">
+									<span>Name</span>
+									<input type="text">
+								</label>
+								<label class="footer__input">
+									<span>E-mail</span>
+									<input type="email">
+								</label>
+								<label class="footer__input">
+									<span>Phone</span>
+									<input type="tel">
+								</label>
+								<label class="footer__input">
+									<span>Message</span>
+									<input type="text">
+								</label>
+							</div>
+							<button class="orange-btn" onClick="popup('.popup-success', 'open', 'message');">Submit</button>
+						</div>
+						<div class="footer__socials">
+							<span class="footer__min-title">Follow us in social media!</span>
+							<div class="footer__socials-items">
+								<a href="#">
+									<img src="img/facebook.svg" alt="Facebook">
+								</a>
+								<a href="#">
+									<img src="img/inst.svg" alt="Instagram">
+								</a>
+								<a href="#">
+									<img src="img/in.svg" alt="Linkedin">
+								</a>
+								<a href="#">
+									<img src="img/tiktok.svg" alt="TikTok">
+								</a>
+							</div>
+						</div>
+						<div class="footer__email">
+							<span class="footer__min-title">Наша почта</span>
+							<p>redcapmustcry@gmail.com</p>
+						</div>
+						<nav class="footer__menu">
+							<ul>
+								<li>
+									<a href="index.html">Об игре</a>
+								</li>
+								<li>
+									<a href="about-authors.html">Об авторах</a>
+								</li>
+								<li>
+									<a href="what-to-do-if.html">Что делать, если?</a>
+								</li>
+								<li>
+									<a href="#">Контакты</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+					<div class="footer__rights">
+						<p>©2022 Company Name. All rights reserved</p>
+						<div>
+							<a href="#">Privacy & Policy</a>
+							<a href="#">Terms & Condition</a>
+						</div>
+					</div>
+				</div>
+			</footer>
+
+		</div>
+		<script src="js/script.js"></script>
+	</body>
+</html>
