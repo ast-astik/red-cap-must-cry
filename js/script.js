@@ -27,17 +27,17 @@ function popup(popupClass, action, successPopupName) {
 		// Email validation
 		if (successPopupName == "subscribe" && action == "open") {
 
-			let popupSubscribeInput = document.querySelector(".popup-subscribe__input input");
+			let popupSubscribeInput = document.querySelector(".popup-subscribe__input");
 
-			if (EMAIL_REGEXP.test(popupSubscribeInput.value)) {
+			if (EMAIL_REGEXP.test(popupSubscribeInput.querySelector("input").value)) {
 				popup('.popup-subscribe', 'close');
-				popupSubscribeInput.value = "";
+				popupSubscribeInput.querySelector("input").value = "";
 			} else {
-				popupSubscribeInput.style.borderColor = "#EE5646";
-				popupSubscribeInput.style.color = "#EE5646";
+				popupSubscribeInput.querySelector("input").style.borderColor = "#EE5646";
+				popupSubscribeInput.querySelector("span").style.color = "#EE5646";
 				setTimeout(() => {
-					popupSubscribeInput.style.borderColor = "";
-					popupSubscribeInput.style.color = "";
+					popupSubscribeInput.querySelector("input").style.borderColor = "";
+					popupSubscribeInput.querySelector("span").style.color = "";
 				}, 800);
 				return;
 			}
@@ -83,28 +83,32 @@ function checkFooterForm() {
 	let error = false;
 
 	let requiredInputs = [
-		document.querySelector(".footer__input:nth-child(1) input"),
-		document.querySelector(".footer__input:nth-child(2) input")
+		document.querySelector(".footer__input:nth-child(1)"),
+		document.querySelector(".footer__input:nth-child(2)")
 	];
 
 	requiredInputs.forEach(input => {
-		if (!input.validity.valid) {
+		if (!input.querySelector("input").validity.valid) {
 			error = true;
-			input.style.borderColor = "#EE5646";
+			input.querySelector("input").style.borderColor = "#EE5646";
+			input.querySelector("span").style.color = "#EE5646";
 			setTimeout(() => {
-				input.style.borderColor = "";
+				input.querySelector("input").style.borderColor = "";
+				input.querySelector("span").style.color = "";
 			}, 800);
 		}
 	});
 
 	if (error) return;
 
-	if (EMAIL_REGEXP.test(requiredInputs[1].value)) {
+	if (EMAIL_REGEXP.test(requiredInputs[1].querySelector("input").value)) {
 		popup('.popup-success', 'open', 'message');
 	} else {
-		requiredInputs[1].style.borderColor = "#EE5646";
+		requiredInputs[1].querySelector("input").style.borderColor = "#EE5646";
+		requiredInputs[1].querySelector("span").style.color = "#EE5646";
 		setTimeout(() => {
-			requiredInputs[1].style.borderColor = "";
+			requiredInputs[1].querySelector("input").style.borderColor = "";
+			requiredInputs[1].querySelector("span").style.color = "";
 		}, 800);
 	}
 }

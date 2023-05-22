@@ -822,20 +822,20 @@ h6 {
 	        justify-content: center;
 	width: 100%;
 }
-.popup-subscribe__input span,
-.popup-subscribe__input input {
+.popup-subscribe__input span {
+	font-size: 25px;
+	line-height: 32px;
 	font-family: "Caveat", cursive;
 	color: #2E1F3C;
 	font-weight: 700;
 }
-.popup-subscribe__input span {
-	font-size: 25px;
-	line-height: 32px;
-}
 .popup-subscribe__input input {
 	width: calc(100% - 57px - 38px);
-	font-size: 25px;
+	font-family: "Montserrat", sans-serif;
+	font-size: 18px;
 	line-height: 40px;
+	font-weight: 500;
+	color: #2E1F3C;
 	border-bottom: 2px solid rgba(46, 31, 60, 0.5);
 }
 
@@ -887,7 +887,7 @@ h6 {
 	}
 	.popup-subscribe__input input {
 		width: calc(100% - 50px - 15px);
-		font-size: 22px;
+		font-size: 17px;
 	}
 }
 .popup-success {
@@ -1903,8 +1903,7 @@ h6 {
 .footer__input span {
 	position: relative;
 }
-.footer__input span,
-.footer__input input {
+.footer__input span {
 	font-family: "Caveat", cursive;
 	font-size: 25px;
 	line-height: 32px;
@@ -1913,8 +1912,11 @@ h6 {
 }
 .footer__input input {
 	width: calc(100% - 72px - 38px);
+	font-family: "Montserrat", sans-serif;
+	font-size: 18px;
 	line-height: 40px;
-	font-weight: 600;
+	font-weight: 500;
+	color: #FFF;
 	background: transparent;
 	border-bottom: 2px solid rgba(255, 255, 255, 0.5);
 }
@@ -2327,12 +2329,12 @@ h6 {
 	.footer__inputs {
 		gap: 24px;
 	}
-	.footer__input span,
-.footer__input input {
+	.footer__input span {
 		font-size: 18px;
 		line-height: 23px;
 	}
 	.footer__input input {
+		font-size: 16px;
 		line-height: 29px;
 	}
 	.footer__input:nth-child(1) span:after {
