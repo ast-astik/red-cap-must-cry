@@ -1962,6 +1962,10 @@ h6 {
 		@include flex (flex, row, 38px, center, flex-end);
 		width: 100%;
 
+		span {
+			position: relative;
+		}
+
 		span,
 		input {
 			font-family: $Caveat;
@@ -1978,6 +1982,27 @@ h6 {
 
 			background: transparent;
 			border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+		}
+
+		&:nth-child(1),
+		&:nth-child(2) {
+
+			span:after {
+				content: "*";
+
+				position: absolute;
+				top: 0;
+			}
+		}
+		&:nth-child(1) {
+			span:after {
+				left: 49.5px;
+			}
+		}
+		&:nth-child(2) {
+			span:after {
+				left: 56.5px;
+			}
 		}
 	}
 
@@ -2305,6 +2330,17 @@ h6 {
 
 			input {
 				line-height: 29px;
+			}
+
+			&:nth-child(1) {
+				span:after {
+					left: 36px;
+				}
+			}
+			&:nth-child(2) {
+				span:after {
+					left: 42px;
+				}
 			}
 		}
 		&__menu {

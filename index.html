@@ -235,16 +235,16 @@
 						<div class="footer__logo">
 							<img src="img/footer__logo.svg" alt="Logo">
 						</div>
-						<div class="footer__form">
+						<form action="" class="footer__form">
 							<h3>Связаться с нами!</h3>
 							<div class="footer__inputs">
 								<label class="footer__input">
 									<span>Name</span>
-									<input type="text">
+									<input type="text" required>
 								</label>
 								<label class="footer__input">
 									<span>E-mail</span>
-									<input type="email">
+									<input type="email" required>
 								</label>
 								<label class="footer__input">
 									<span>Phone</span>
@@ -255,8 +255,8 @@
 									<input type="text">
 								</label>
 							</div>
-							<button class="orange-btn" onClick="popup('.popup-success', 'open', 'message');">Submit</button>
-						</div>
+							<button type="submit" class="orange-btn" onClick="checkFooterForm();">Submit</button>
+						</form>
 						<div class="footer__socials">
 							<span class="footer__min-title">Follow us in social media!</span>
 							<div class="footer__socials-items">

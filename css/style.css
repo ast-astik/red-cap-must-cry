@@ -1900,6 +1900,9 @@ h6 {
 	        justify-content: flex-end;
 	width: 100%;
 }
+.footer__input span {
+	position: relative;
+}
 .footer__input span,
 .footer__input input {
 	font-family: "Caveat", cursive;
@@ -1914,6 +1917,17 @@ h6 {
 	font-weight: 600;
 	background: transparent;
 	border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+}
+.footer__input:nth-child(1) span:after, .footer__input:nth-child(2) span:after {
+	content: "*";
+	position: absolute;
+	top: 0;
+}
+.footer__input:nth-child(1) span:after {
+	left: 49.5px;
+}
+.footer__input:nth-child(2) span:after {
+	left: 56.5px;
 }
 .footer__socials {
 	padding-top: 85px;
@@ -2320,6 +2334,12 @@ h6 {
 	}
 	.footer__input input {
 		line-height: 29px;
+	}
+	.footer__input:nth-child(1) span:after {
+		left: 36px;
+	}
+	.footer__input:nth-child(2) span:after {
+		left: 42px;
 	}
 	.footer__menu {
 		padding: 73px 0 0 0;

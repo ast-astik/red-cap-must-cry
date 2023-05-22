@@ -1,3 +1,7 @@
+const EMAIL_REGEXP = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu;
+
+
+
 function toggleLanguageMenu() {
 	document.querySelector(".header__language-content").classList.toggle("header__language-content_open");
 }
@@ -24,11 +28,6 @@ function popup(popupClass, action, successPopupName) {
 		if (successPopupName == "subscribe" && action == "open") {
 
 			let popupSubscribeInput = document.querySelector(".popup-subscribe__input input");
-			const EMAIL_REGEXP = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu;
-
-			function isEmailValid(value) {
-			 	return EMAIL_REGEXP.test(value);
-			}
 
 			if (EMAIL_REGEXP.test(popupSubscribeInput.value)) {
 				popup('.popup-subscribe', 'close');
@@ -73,6 +72,41 @@ function playVideo() {
 	buttonElem.style.opacity = "0";
 	videoElem.play();
 	videoElem.setAttribute('controls', '');
+}
+
+document.querySelector(".footer__form").addEventListener('submit', e => {
+	e.preventDefault();
+});
+
+function checkFooterForm() {
+
+	let error = false;
+
+	let requiredInputs = [
+		document.querySelector(".footer__input:nth-child(1) input"),
+		document.querySelector(".footer__input:nth-child(2) input")
+	];
+
+	requiredInputs.forEach(input => {
+		if (!input.validity.valid) {
+			error = true;
+			input.style.borderColor = "#EE5646";
+			setTimeout(() => {
+				input.style.borderColor = "";
+			}, 800);
+		}
+	});
+
+	if (error) return;
+
+	if (EMAIL_REGEXP.test(requiredInputs[1].value)) {
+		popup('.popup-success', 'open', 'message');
+	} else {
+		requiredInputs[1].style.borderColor = "#EE5646";
+		setTimeout(() => {
+			requiredInputs[1].style.borderColor = "";
+		}, 800);
+	}
 }
 
 
