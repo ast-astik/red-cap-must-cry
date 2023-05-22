@@ -214,16 +214,23 @@ h6 {
 	height: 50px;
 	@extend %flex-center;
 
-	background: #535182;
 	border-radius: 50px;
 }
 .purple-btn {
 	@include font(18px, 22px);
 	font-weight: 600;
 	color: #FFF;
+
+	background: #535182;
 }
 .purple-circle-btn {
 	width: 50px;
+
+	background: rgba(83, 81, 130, 0.1);
+
+	svg path {
+		fill: #535182;
+	}
 }
 
 

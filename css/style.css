@@ -237,7 +237,6 @@ h6 {
 .purple-btn,
 .purple-circle-btn {
 	height: 50px;
-	background: #535182;
 	border-radius: 50px;
 }
 
@@ -246,10 +245,15 @@ h6 {
 	line-height: 22px;
 	font-weight: 600;
 	color: #FFF;
+	background: #535182;
 }
 
 .purple-circle-btn {
 	width: 50px;
+	background: rgba(83, 81, 130, 0.1);
+}
+.purple-circle-btn svg path {
+	fill: #535182;
 }
 
 .header {
