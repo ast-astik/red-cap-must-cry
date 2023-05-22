@@ -246,16 +246,33 @@ h6 {
 	font-weight: 600;
 	color: #FFF;
 	background: #535182;
+	-webkit-transition: all 0.3s ease;
+	transition: all 0.3s ease;
 }
 
 .purple-circle-btn {
 	width: 50px;
 	background: rgba(83, 81, 130, 0.1);
+	-webkit-transition: all 0.3s ease;
+	transition: all 0.3s ease;
 }
 .purple-circle-btn svg path {
 	fill: #535182;
+	-webkit-transition: all 0.3s ease;
+	transition: all 0.3s ease;
 }
 
+@media (hover: hover) {
+	.purple-btn:hover {
+		background: #7876AF;
+	}
+	.purple-circle-btn:hover {
+		background: #535182;
+	}
+	.purple-circle-btn:hover svg path {
+		fill: #fff;
+	}
+}
 .header {
 	width: 100%;
 	position: fixed;
@@ -615,6 +632,8 @@ h6 {
 	height: 58px;
 	background: #EE5646;
 	border-radius: 50px;
+	-webkit-transition: all 0.3s ease;
+	transition: all 0.3s ease;
 }
 .initial__btns a:nth-child(1) img {
 	height: 40.56px;
@@ -641,6 +660,11 @@ h6 {
 	width: 40%;
 }
 
+@media (hover: hover) {
+	.initial__btns a:hover {
+		background: #FE8377;
+	}
+}
 @media (max-width: 1400px) {
 	.initial__bg1 {
 		left: 0;
@@ -738,8 +762,15 @@ h6 {
 	color: #fff;
 	background: #EE5646;
 	border-radius: 100px;
+	-webkit-transition: all 0.3s ease;
+	transition: all 0.3s ease;
 }
 
+@media (hover: hover) {
+	.orange-btn:hover {
+		background: #FE8377;
+	}
+}
 @media (max-width: 575.5px) {
 	.orange-btn {
 		height: 45px;
@@ -1152,6 +1183,8 @@ h6 {
 }
 .video-history__video button img {
 	width: 180px;
+	-webkit-transition: all 0.3s ease;
+	transition: all 0.3s ease;
 }
 .video-history__video button span {
 	font-family: "Caveat", cursive;
@@ -1177,6 +1210,12 @@ h6 {
 	text-align: center;
 }
 
+@media (hover: hover) {
+	.video-history__video button:hover img {
+		-webkit-transform: scale(1.04);
+		        transform: scale(1.04);
+	}
+}
 @media (max-width: 1400px) {
 	.video-history__container {
 		max-width: 940px;
@@ -1343,6 +1382,8 @@ h6 {
 	height: 58px;
 	border-radius: 50px;
 	border: 2px solid #EE5646;
+	-webkit-transition: all 0.3s ease;
+	transition: all 0.3s ease;
 }
 .subscribe__btns a img:nth-child(1) {
 	display: none;
@@ -1372,6 +1413,11 @@ h6 {
 	width: 18.5%;
 }
 
+@media (hover: hover) {
+	.subscribe__btns a:hover {
+		border-color: #FFC0B9;
+	}
+}
 @media (max-width: 1200px) {
 	.subscribe__content {
 		padding: 115px 0;
@@ -1903,6 +1949,8 @@ h6 {
 	height: 40px;
 	border-radius: 40px;
 	background: #8887AA;
+	-webkit-transition: all 0.3s ease;
+	transition: all 0.3s ease;
 }
 .footer__socials-items a img {
 	width: 24px;
@@ -1951,6 +1999,8 @@ h6 {
 	font-weight: 600;
 	color: #FFFFFF;
 	mix-blend-mode: normal;
+	-webkit-transition: all 0.3s ease;
+	transition: all 0.3s ease;
 }
 .footer__rights {
 	border-top: 3px solid rgba(255, 255, 255, 0.1);
@@ -1977,6 +2027,8 @@ h6 {
 	letter-spacing: -0.02em;
 	color: #FFFFFF;
 	mix-blend-mode: normal;
+	-webkit-transition: all 0.3s ease;
+	transition: all 0.3s ease;
 }
 .footer__rights div {
 	display: -webkit-box;
@@ -1995,6 +2047,17 @@ h6 {
 	        justify-content: stretch;
 }
 
+@media (hover: hover) {
+	.footer__socials-items a:hover {
+		background: rgba(136, 135, 170, 0.5);
+	}
+	.footer__menu ul li a:hover {
+		opacity: 0.6;
+	}
+	.footer__rights div a:hover {
+		opacity: 0.6;
+	}
+}
 @media (max-width: 1400px) {
 	.footer__rights {
 		position: relative;
@@ -2712,6 +2775,8 @@ h6 {
 	border-radius: 24px;
 	background: #FFFBFB;
 	overflow: hidden;
+	-webkit-transition: all 0.3s ease;
+	transition: all 0.3s ease;
 }
 .what-to-do-if__item h6 {
 	padding: 45px 30px 0 30px;
@@ -2730,6 +2795,12 @@ h6 {
 	   object-fit: cover;
 }
 
+@media (hover: hover) {
+	.what-to-do-if__item:hover {
+		-webkit-transform: scale(1.02);
+		        transform: scale(1.02);
+	}
+}
 @media (min-width: 1300.1px) {
 	.what-to-do-if__items {
 		-ms-grid-columns: 1fr 1fr 1fr 1fr;

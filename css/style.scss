@@ -222,14 +222,34 @@ h6 {
 	color: #FFF;
 
 	background: #535182;
+
+	transition: $anim;
 }
 .purple-circle-btn {
 	width: 50px;
 
 	background: rgba(83, 81, 130, 0.1);
 
+	transition: $anim;
+
 	svg path {
 		fill: #535182;
+
+		transition: $anim;
+	}
+}
+
+@media (hover: hover) {
+	.purple-btn:hover {
+		background: #7876AF;
+	}
+
+	.purple-circle-btn:hover {
+		background: #535182;
+
+		svg path {
+			fill: #fff;
+		}
 	}
 }
 
@@ -613,6 +633,8 @@ h6 {
 
 			background: #EE5646;
 			border-radius: 50px;
+
+			transition: $anim;
 		}
 
 		a:nth-child(1) {
@@ -651,6 +673,16 @@ h6 {
 		right: 124px;
 
 		width: 40%;
+	}
+}
+
+@media (hover: hover) {
+	.initial {
+		&__btns {
+			a:hover {
+				background: #FE8377;
+			}
+		}
 	}
 }
 
@@ -781,6 +813,14 @@ h6 {
 
 	background: #EE5646;
 	border-radius: 100px;
+
+	transition: $anim;
+}
+
+@media (hover: hover) {
+	.orange-btn:hover {
+		background: #FE8377;
+	}
 }
 
 @media (max-width: 575.5px) {
@@ -1244,6 +1284,8 @@ h6 {
 
 			img {
 				width: 180px;
+
+				transition: $anim;
 			}
 
 			span {
@@ -1268,6 +1310,19 @@ h6 {
 			margin: 0 auto;
 			max-width: 856px;
 			text-align: center;
+		}
+	}
+}
+
+@media (hover:hover) {
+	.video-history {
+		&__video {
+
+			button:hover {
+				img {
+					transform: scale(1.04);
+				}
+			}
 		}
 	}
 }
@@ -1415,7 +1470,7 @@ h6 {
 
 		
 		h2 {
-							max-width: 1000px;
+			max-width: 1000px;
 			text-align: center;
 		}
 
@@ -1438,6 +1493,8 @@ h6 {
 
 			border-radius: 50px;
 			border: 2px solid #EE5646;
+
+			transition: $anim;
 
 			img:nth-child(1) {
 				display: none;
@@ -1476,6 +1533,16 @@ h6 {
 		right: 0;
 
 		width: 18.50%;
+	}
+}
+
+@media (hover: hover) {
+	.subscribe {
+		&__btns {
+			a:hover {
+				border-color: #FFC0B9;
+			}
+		}
 	}
 }
 
@@ -1939,6 +2006,8 @@ h6 {
 			border-radius: 40px;
 			background: #8887AA;
 
+			transition: $anim;
+
 			img {
 				width: 24px;
 				height: 24px;
@@ -1978,6 +2047,8 @@ h6 {
 					color: #FFFFFF;
 
 					mix-blend-mode: normal;
+
+					transition: $anim;
 				}
 			}
 		}
@@ -1995,10 +2066,36 @@ h6 {
 			color: #FFFFFF;
 
 			mix-blend-mode: normal;
+
+			transition: $anim;
 		}
 
 		div {
 			@include flex(flex, row, 60px, center, stretch);
+		}
+	}
+}
+
+@media (hover: hover) {
+	.footer {
+		&__socials-items {
+			a:hover {
+				background: rgba(136, 135, 170, 0.5);
+			}
+		}
+		&__menu {
+			ul {
+				li {
+					a:hover {
+						opacity: 0.6;
+					}
+				}
+			}
+		}
+		&__rights {
+			div a:hover {
+				opacity: 0.6;
+			}
 		}
 	}
 }
@@ -2781,6 +2878,8 @@ h6 {
 		background: #FFFBFB;
 
 		overflow: hidden;
+
+		transition: $anim;
 		
 		h6 {
 			padding: 45px 30px 0 30px;
@@ -2798,6 +2897,14 @@ h6 {
 			height: 290px;
 
 			object-fit: cover;
+		}
+	}
+}
+
+@media (hover: hover) {
+	.what-to-do-if {
+		&__item:hover {
+			transform: scale(1.02);
 		}
 	}
 }
