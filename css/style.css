@@ -333,7 +333,7 @@ h6 {
 	-webkit-transition: all 0.3s ease;
 	transition: all 0.3s ease;
 }
-.header__menu ul li.active:after {
+.header__menu ul li.current-menu-item:after {
 	content: "";
 	position: absolute;
 	bottom: -18px;
@@ -344,7 +344,7 @@ h6 {
 	background: url("../img/menu-underline.svg") no-repeat;
 	background-size: 100% 100%;
 }
-.header__menu ul li.active a {
+.header__menu ul li.current-menu-item a {
 	color: #2E1F3C;
 }
 .header__menu-close {
@@ -532,10 +532,10 @@ h6 {
 		font-size: 18px;
 		line-height: 22px;
 	}
-	.header__menu ul li.active {
+	.header__menu ul li.current-menu-item {
 		padding-bottom: 14px;
 	}
-	.header__menu ul li.active:after {
+	.header__menu ul li.current-menu-item:after {
 		bottom: 0;
 	}
 	.header__menu-close {

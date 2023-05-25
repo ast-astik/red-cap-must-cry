@@ -302,7 +302,7 @@ h6 {
 				}
 			}
 
-			li.active {
+			li.current-menu-item {
 
 				&:after {
 					content: "";
@@ -510,7 +510,7 @@ h6 {
 						@include font(18px, 22px);
 					}
 				}
-				li.active {
+				li.current-menu-item {
 					padding-bottom: 14px;
 
 					&:after {
