@@ -822,15 +822,18 @@ h6 {
 	        justify-content: center;
 	width: 100%;
 }
-.popup-subscribe__input span {
+.popup-subscribe__input span:nth-child(1) {
 	font-size: 25px;
 	line-height: 32px;
 	font-family: "Caveat", cursive;
 	color: #2E1F3C;
 	font-weight: 700;
 }
-.popup-subscribe__input input {
+.popup-subscribe__input span:nth-child(2) {
 	width: calc(100% - 57px - 38px);
+}
+.popup-subscribe__input input {
+	width: 100%;
 	font-family: "Montserrat", sans-serif;
 	font-size: 18px;
 	line-height: 40px;
@@ -882,11 +885,13 @@ h6 {
 	.popup-subscribe__input {
 		gap: 15px;
 	}
-	.popup-subscribe__input span {
+	.popup-subscribe__input span:nth-child(1) {
 		font-size: 22px;
 	}
-	.popup-subscribe__input input {
+	.popup-subscribe__input span:nth-child(2) {
 		width: calc(100% - 50px - 15px);
+	}
+	.popup-subscribe__input input {
 		font-size: 17px;
 	}
 }

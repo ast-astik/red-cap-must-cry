@@ -871,15 +871,19 @@ h6 {
 		@include flex(flex, row, 38px, center, center);
 		width: 100%;
 
-		span {
+		span:nth-child(1) {
 			@include font(25px, 32px);
 			font-family: $Caveat;
 			color: #2E1F3C;
 			font-weight: 700;
 		}
 
-		input {
+		span:nth-child(2) {
 			width: calc(100% - 57px - 38px);
+		}
+
+		input {
+			width: 100%;
 
 			font-family: $Montserrat;
 			@include font(18px, 40px);
@@ -943,13 +947,15 @@ h6 {
 		&__input {
 			gap: 15px;
 
-			span {
+			span:nth-child(1) {
 				font-size: 22px;
 			}
 
-			input {
+			span:nth-child(2) {
 				width: calc(100% - 50px - 15px);
+			}
 
+			input {
 				font-size: 17px;
 			}
 		}
