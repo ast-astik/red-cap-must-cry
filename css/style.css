@@ -1900,18 +1900,21 @@ h6 {
 	        justify-content: flex-end;
 	width: 100%;
 }
-.footer__input span {
+.footer__input span:nth-child(1) {
 	position: relative;
 }
-.footer__input span {
+.footer__input span:nth-child(1) {
 	font-family: "Caveat", cursive;
 	font-size: 25px;
 	line-height: 32px;
 	font-weight: 700;
 	color: #FFF;
 }
-.footer__input input {
+.footer__input span:nth-child(2) {
 	width: calc(100% - 72px - 38px);
+}
+.footer__input input {
+	width: 100%;
 	font-family: "Montserrat", sans-serif;
 	font-size: 18px;
 	line-height: 40px;
@@ -1920,15 +1923,15 @@ h6 {
 	background: transparent;
 	border-bottom: 2px solid rgba(255, 255, 255, 0.5);
 }
-.footer__input:nth-child(1) span:after, .footer__input:nth-child(2) span:after {
+.footer__input:nth-child(1) span:nth-child(1):after, .footer__input:nth-child(2) span:nth-child(1):after {
 	content: "*";
 	position: absolute;
 	top: 0;
 }
-.footer__input:nth-child(1) span:after {
+.footer__input:nth-child(1) span:nth-child(1):after {
 	left: 49.5px;
 }
-.footer__input:nth-child(2) span:after {
+.footer__input:nth-child(2) span:nth-child(1):after {
 	left: 56.5px;
 }
 .footer__socials {
@@ -2108,7 +2111,7 @@ h6 {
 	.footer__input {
 		gap: 25px;
 	}
-	.footer__input input {
+	.footer__input span:nth-child(2) {
 		width: calc(100% - 72px - 25px);
 	}
 }
@@ -2191,7 +2194,7 @@ h6 {
 		    -ms-flex-pack: start;
 		        justify-content: flex-start;
 	}
-	.footer__input input {
+	.footer__input span:nth-child(2) {
 		width: 100%;
 	}
 	.footer__socials {
@@ -2329,7 +2332,7 @@ h6 {
 	.footer__inputs {
 		gap: 24px;
 	}
-	.footer__input span {
+	.footer__input span:nth-child(1) {
 		font-size: 18px;
 		line-height: 23px;
 	}
@@ -2337,10 +2340,10 @@ h6 {
 		font-size: 16px;
 		line-height: 29px;
 	}
-	.footer__input:nth-child(1) span:after {
+	.footer__input:nth-child(1) span:nth-child(1):after {
 		left: 36px;
 	}
-	.footer__input:nth-child(2) span:after {
+	.footer__input:nth-child(2) span:nth-child(1):after {
 		left: 42px;
 	}
 	.footer__menu {
