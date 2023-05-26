@@ -497,10 +497,10 @@ h6 {
 @media (max-width: 767.5px) {
 	.header__menu {
 		position: absolute;
-		top: -450px;
+		top: -560px;
 		left: 0;
 		z-index: 3;
-		padding: 124.5px 0 97.5px 0;
+		padding: 124.5px 0 220px 0;
 		width: 100%;
 		background: #FFFFFF;
 		border: 5px solid #D7E2F1;
@@ -545,11 +545,41 @@ h6 {
 		top: 0;
 		visibility: visible;
 	}
+	.header__menu_open + .header__btns .purple-btn {
+		top: 360px;
+		visibility: visible;
+	}
+	.header__menu_open + .header__btns .header__socials {
+		top: 440px;
+		visibility: visible;
+	}
 	.header__btns {
 		gap: 20px;
 	}
 	.header__burger {
 		display: inline-block;
+	}
+	.header .purple-btn, .header__socials {
+		position: absolute;
+		z-index: 3;
+		left: 50%;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-transform: translate(-50%, 0);
+		        transform: translate(-50%, 0);
+	}
+	.header .purple-btn {
+		top: -200px;
+		visibility: hidden;
+		-webkit-transition: all 0.3s ease;
+		transition: all 0.3s ease;
+	}
+	.header__socials {
+		top: -120px;
+		visibility: hidden;
+		-webkit-transition: all 0.3s ease;
+		transition: all 0.3s ease;
 	}
 }
 @media (max-width: 575.5px) {
@@ -2401,7 +2431,7 @@ h6 {
 	text-align: center;
 }
 .about-authors__items {
-	padding: 70px 0;
+	padding: 45px 0;
 }
 .about-authors__item {
 	position: relative;

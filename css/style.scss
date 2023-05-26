@@ -488,11 +488,12 @@ h6 {
 	.header {
 		&__menu {
 			position: absolute;
-			top: -450px;
+			top: -560px;
 			left: 0;
 			z-index: 3;
 
-			padding: 124.5px 0 97.5px 0;
+			//padding: 124.5px 0 97.5px 0;
+			padding: 124.5px 0 220px 0;
 			width: 100%;
 
 			@include modal-bg-shdw-brdr(0px 0px 20px 20px);
@@ -527,6 +528,20 @@ h6 {
 				top: 0;
 
 				visibility: visible;
+
+				& + .header__btns {
+
+					.purple-btn {
+						top: 360px;
+
+						visibility: visible;
+					}
+					.header__socials {
+						top: 440px;
+
+						visibility: visible;
+					}
+				}
 			}
 		}
 		&__btns {
@@ -534,6 +549,30 @@ h6 {
 		}
 		&__burger {
 			display: inline-block;
+		}
+		.purple-btn,
+		&__socials {
+			position: absolute;
+			z-index: 3;
+			left: 50%;
+
+			display: flex;
+
+			transform: translate(-50%, 0);
+		}
+		.purple-btn {
+			top: -200px;
+
+			visibility: hidden;
+
+			transition: $anim;
+		}
+		&__socials {
+			top: -120px;
+
+			visibility: hidden;
+
+			transition: $anim;
 		}
 	}
 }
@@ -2409,7 +2448,7 @@ h6 {
 		}
 	}
 	&__items {
-		padding: 70px 0;
+		padding: 45px 0;
 	}
 	&__item {
 		position: relative;
