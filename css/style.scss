@@ -2071,7 +2071,7 @@ h6 {
 
 		ul {
 			@include flex(flex, row, 0, center, space-between);
-			max-width: 630px;
+			max-width: calc(630px - 153px);
 
 			li {
 
