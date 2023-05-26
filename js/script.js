@@ -6,6 +6,12 @@ function toggleLanguageMenu() {
 	document.querySelector(".header__language-content").classList.toggle("header__language-content_open");
 }
 
+document.addEventListener("click", event => {
+	if (!document.querySelector(".header__language").contains(event.target) && document.querySelector(".header__language-content_open")) {
+		document.querySelector(".header__language-content_open").classList.remove("header__language-content_open");
+	}
+});
+
 function burgerMenu(value) {
 	let menu = document.querySelector(".header__menu");
 	let openClass = "header__menu_open";
