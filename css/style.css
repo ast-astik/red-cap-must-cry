@@ -2739,7 +2739,7 @@ h6 {
 }
 .team__items-btn-prev, .team__items-btn-next {
 	width: 24px;
-	height: 23.35px;
+	height: 25px;
 	background: url("../img/swiper-nav-arrow.svg") no-repeat;
 	background-size: cover;
 }
