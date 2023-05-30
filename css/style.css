@@ -1903,52 +1903,41 @@ h6 {
 	width: 100%;
 	padding-right: 54px;
 	margin: 53px 0 22px 0;
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
-	    -ms-flex-direction: column;
-	        flex-direction: column;
-	gap: 22px;
-	-webkit-box-align: end;
-	    -ms-flex-align: end;
-	        align-items: flex-end;
-	-webkit-box-pack: start;
-	    -ms-flex-pack: start;
-	        justify-content: flex-start;
-}
-.footer__input {
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-orient: horizontal;
-	-webkit-box-direction: normal;
-	    -ms-flex-direction: row;
-	        flex-direction: row;
-	gap: 38px;
+	display: -ms-grid;
+	display: grid;
+	-ms-grid-columns: auto 38px 1fr;
+	grid-template-columns: auto 1fr;
+	gap: 22px 38px;
 	-webkit-box-align: center;
 	    -ms-flex-align: center;
 	        align-items: center;
-	-webkit-box-pack: end;
-	    -ms-flex-pack: end;
-	        justify-content: flex-end;
-	width: 100%;
+	-webkit-box-pack: stretch;
+	    -ms-flex-pack: stretch;
+	        justify-content: stretch;
 }
-.footer__input span:nth-child(1) {
+.footer__inputs span:nth-child(odd) {
 	position: relative;
-}
-.footer__input span:nth-child(1) {
+	-ms-grid-column-align: right;
+	    justify-self: right;
 	font-family: "Caveat", cursive;
 	font-size: 25px;
 	line-height: 32px;
 	font-weight: 700;
 	color: #FFF;
 }
-.footer__input span:nth-child(2) {
-	width: calc(100% - 72px - 38px);
+.footer__inputs span:nth-child(1):after,
+.footer__inputs span:nth-child(3):after {
+	content: "*";
+	position: absolute;
+	top: 0;
+	right: 0;
+	-webkit-transform: translate(100%, 0);
+	        transform: translate(100%, 0);
 }
-.footer__input input {
+.footer__inputs span:nth-child(even) {
+	width: 100%;
+}
+.footer__inputs span:nth-child(even) input {
 	width: 100%;
 	font-family: "Montserrat", sans-serif;
 	font-size: 18px;
@@ -1957,17 +1946,6 @@ h6 {
 	color: #FFF;
 	background: transparent;
 	border-bottom: 2px solid rgba(255, 255, 255, 0.5);
-}
-.footer__input:nth-child(1) span:nth-child(1):after, .footer__input:nth-child(2) span:nth-child(1):after {
-	content: "*";
-	position: absolute;
-	top: 0;
-}
-.footer__input:nth-child(1) span:nth-child(1):after {
-	left: 49.5px;
-}
-.footer__input:nth-child(2) span:nth-child(1):after {
-	left: 56.5px;
 }
 .footer__socials {
 	padding-top: 85px;
@@ -2142,12 +2120,7 @@ h6 {
 	}
 	.footer__inputs {
 		padding-right: 0;
-	}
-	.footer__input {
-		gap: 25px;
-	}
-	.footer__input span:nth-child(2) {
-		width: calc(100% - 72px - 25px);
+		gap: 22px 25px;
 	}
 }
 @media (max-width: 991.5px) {
@@ -2213,24 +2186,20 @@ h6 {
 		width: 110px;
 		height: 110px;
 	}
-	.footer__input {
-		display: -webkit-box;
-		display: -ms-flexbox;
-		display: flex;
-		-webkit-box-orient: vertical;
-		-webkit-box-direction: normal;
-		    -ms-flex-direction: column;
-		        flex-direction: column;
+	.footer__inputs {
+		-ms-grid-columns: 1fr;
+		grid-template-columns: 1fr;
 		gap: 0;
-		-webkit-box-align: stretch;
-		    -ms-flex-align: stretch;
-		        align-items: stretch;
-		-webkit-box-pack: start;
-		    -ms-flex-pack: start;
-		        justify-content: flex-start;
 	}
-	.footer__input span:nth-child(2) {
-		width: 100%;
+	.footer__inputs span:nth-child(odd) {
+		-ms-grid-column-align: left;
+		    justify-self: left;
+	}
+	.footer__inputs span:nth-child(even) {
+		margin-bottom: 22px;
+	}
+	.footer__inputs span:last-child {
+		margin-bottom: 0;
 	}
 	.footer__socials {
 		padding-top: 60px;
@@ -2364,22 +2333,19 @@ h6 {
 		width: 93px;
 		height: 93px;
 	}
-	.footer__inputs {
-		gap: 24px;
-	}
-	.footer__input span:nth-child(1) {
+	.footer__inputs span:nth-child(odd) {
 		font-size: 18px;
 		line-height: 23px;
 	}
-	.footer__input input {
+	.footer__inputs span:nth-child(even) {
+		margin-bottom: 24px;
+	}
+	.footer__inputs span:nth-child(even) input {
 		font-size: 16px;
 		line-height: 29px;
 	}
-	.footer__input:nth-child(1) span:nth-child(1):after {
-		left: 36px;
-	}
-	.footer__input:nth-child(2) span:nth-child(1):after {
-		left: 42px;
+	.footer__inputs span:last-child {
+		margin-bottom: 0;
 	}
 	.footer__menu {
 		padding: 73px 0 0 0;

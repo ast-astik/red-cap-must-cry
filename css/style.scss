@@ -2000,57 +2000,42 @@ h6 {
 		width: 100%;
 		padding-right: 54px;
 		margin: 53px 0 22px 0;
-		@include flex (flex, column, 22px, flex-end, flex-start);
-	}
-	&__input {
-		@include flex (flex, row, 38px, center, flex-end);
-		width: 100%;
-
-		span:nth-child(1) {
+		@include grid(grid, auto 1fr, 22px 38px, center, stretch);
+	
+		span:nth-child(odd) {
 			position: relative;
-		}
 
-		span:nth-child(1) {
+			justify-self: right;
+
 			font-family: $Caveat;
 			@include font(25px, 32px);
 			font-weight: 700;
 			color: #FFF;
 		}
+		span:nth-child(1):after,
+		span:nth-child(3):after {
+			content: "*";
 
-		span:nth-child(2) {
-			width: calc(100% - 72px - 38px);
+			position: absolute;
+			top: 0;
+			right: 0;
+
+			transform: translate(100%, 0);
 		}
 
-		input {
+		span:nth-child(even) { // input
 			width: 100%;
 
-			font-family: $Montserrat;
-			@include font(18px, 40px);
-			font-weight: 500;
-			color: #FFF;
+			input {
+				width: 100%;
 
-			background: transparent;
-			border-bottom: 2px solid rgba(255, 255, 255, 0.5);
-		}
+				font-family: $Montserrat;
+				@include font(18px, 40px);
+				font-weight: 500;
+				color: #FFF;
 
-		&:nth-child(1),
-		&:nth-child(2) {
-
-			span:nth-child(1):after {
-				content: "*";
-
-				position: absolute;
-				top: 0;
-			}
-		}
-		&:nth-child(1) {
-			span:nth-child(1):after {
-				left: 49.5px;
-			}
-		}
-		&:nth-child(2) {
-			span:nth-child(1):after {
-				left: 56.5px;
+				background: transparent;
+				border-bottom: 2px solid rgba(255, 255, 255, 0.5);
 			}
 		}
 	}
@@ -2212,13 +2197,7 @@ h6 {
 		}
 		&__inputs {
 			padding-right: 0;
-		}
-		&__input {
-			gap: 25px;
-
-			span:nth-child(2) {
-				width: calc(100% - 72px - 25px);
-			}
+			gap: 22px 25px;
 		}
 	}
 }
@@ -2250,11 +2229,18 @@ h6 {
 				height: 110px;
 			}
 		}
-		&__input {
-			@include flex(flex, column, 0, stretch, flex-start);
+		&__inputs {
+			grid-template-columns: 1fr;
+			gap: 0;
 
-			span:nth-child(2) {
-				width: 100%;
+			span:nth-child(odd) {
+				justify-self: left;
+			}
+			span:nth-child(even) {
+				margin-bottom: 22px;
+			}
+			span:last-child {
+				margin-bottom: 0;
 			}
 		}
 		&__socials {
@@ -2369,26 +2355,19 @@ h6 {
 			}
 		}
 		&__inputs {
-			gap: 24px;
-		}
-		&__input {
-			span:nth-child(1) {
+
+			span:nth-child(odd) {
 				@include font(18px, 23px);
 			}
+			span:nth-child(even) {
+				margin-bottom: 24px;
 
-			input {
-				@include font(16px, 29px);
-			}
-
-			&:nth-child(1) {
-				span:nth-child(1):after {
-					left: 36px;
+				input {
+					@include font(16px, 29px);
 				}
 			}
-			&:nth-child(2) {
-				span:nth-child(1):after {
-					left: 42px;
-				}
+			span:last-child {
+				margin-bottom: 0;
 			}
 		}
 		&__menu {
