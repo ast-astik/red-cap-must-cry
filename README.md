@@ -4,7 +4,7 @@
 
 ### Description:
 **Red Cap Must Cry** is a *freelance project* where I have implemented the front-end development for a 3-page website based on a *Figma* design.  
-Link: https://ast-astik.github.io/red-cap-must-cry/  
+Link: https://astik-dev.github.io/red-cap-must-cry/  
 Link: https://redcapmustcry.com/
 
 ### Functional:
